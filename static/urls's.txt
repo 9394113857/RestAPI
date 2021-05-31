@@ -1,0 +1,62 @@
+Signup:-
+http://127.0.0.1:5000/users/create === POST
+Body---> Raw----> json
+{
+    "username": "raghu",
+    "email": "raghu123@gmail.com",
+    "phone": "123456789",
+    "password": "12345",
+    "ip": "120.48.20.46",
+    "date": "2021-05-18"
+}
+// New parameter names 6 params:-
+{
+    "username": "raghu",
+    "email": "raghu123@gmail.com",
+    "phone": "123456789",
+    "password": "12345",
+    "userip": "120.48.20.46",
+    "date": "2021-05-18"
+}
+
+
+
+Update:-
+http://127.0.0.1:5000/users/update === PUT
+Body---> Raw----> json
+{
+    "signupId": 3,
+    "userName": "raghunadh_br",
+    "emailId": "raghubr@gmail.com",
+    "phoneNumber": "1234567890"
+}
+
+Delete:-
+http://127.0.0.1:5000/users/delete/3 === DELETE
+
+
+
+====================================================
+Working:-
+User_Registration:-
+register:-
+http://127.0.0.1:5000/users_registration/register === POST
+Body---> Raw----> json
+{
+    "user_id": "1",
+
+    "user_date_registered": "2021-05-18"
+
+}
+
+=====================================================
+Validations part:-
+===> POST
+http://localhost:5000/user/
+Body---> Raw--->json:-
+{
+    "first_name":   "Bob",
+    "last_name":    "Johnson",
+    "age":          45,
+    "married":      true
+}
