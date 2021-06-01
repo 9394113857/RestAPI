@@ -59,6 +59,13 @@ CHANGE COLUMN `user_signup_id` `user_signup_id` VARCHAR(20) NOT NULL DEFAULT '00
 ALTER TABLE `clinicalfirst`.`user_signup`
 CHANGE COLUMN `user_signup_id` `user_signup_id` VARCHAR(20) NOT NULL ;
 
+-- Re Order the Columns in the Table:-
+ALTER TABLE `work`.`user_signup`
+CHANGE COLUMN `USER_DEVICE` `USER_DEVICE` VARCHAR(45) NULL DEFAULT NULL AFTER `USER_IP`;
+
+
+
+
 
 
 

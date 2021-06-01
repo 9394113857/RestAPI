@@ -6,16 +6,16 @@ Body---> Raw----> json
     "email": "raghu123@gmail.com",
     "phone": "123456789",
     "password": "12345",
-    "ip": "120.48.20.46",
     "date": "2021-05-18"
 }
-// New parameter names 6 params:-
+
+
+// New parameter names params:-
 {
     "username": "raghu",
     "email": "raghu123@gmail.com",
     "phone": "123456789",
     "password": "12345",
-    "userip": "120.48.20.46",
     "date": "2021-05-18"
 }
 

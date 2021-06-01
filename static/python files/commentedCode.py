@@ -1,88 +1,3 @@
-# 1.This framework is for throwing Errors of Fields:-
-# 2.Flask framework and Mysql Database:-
-import re
-
-from flask import request, jsonify, Flask, logging
-from flask_mysqldb import MySQL
-
-# 3.validation framework:-
-
-app = Flask(__name__)
-
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'raghu'
-app.config['MYSQL_DB'] = 'clinicalfirst'
-
-mysql = MySQL(app)
-
-
-# User_Signup:-
-# create in postman by using jsonify:-
-@app.route('/users/create', methods=['POST'])
-def register():
-    if 'username' in request.json and 'password' in request.json \
-            and 'email' in request.json and 'phone' in request.json and 'ip' in request.json and 'date' in request.json:
-        username = request.json['username']
-        email = request.json['email']
-        phone = request.json['phone']
-        password = request.json['password']
-        userip = request.json['ip']
-        date = request.json['date']
-        # Cursor:-
-        cursor = mysql.connection.cursor()
-        cursor.execute('SELECT * FROM user_signup WHERE USER_NAME = % s', (username,))
-        account = cursor.fetchone()
-        if account:
-            msg = 'Account already exists !'
-        elif not re.match(r'[^@]+@[^@]+\.[^@]+', email):
-            msg = 'Invalid email address !'
-        elif not re.match(r'[A-Za-z0-9]+', username):
-            msg = 'Username must contain only characters and numbers !'
-        elif not re.match(r'^[A-Za-z0-9@#$%^&+=]{8,32}',
-                          password):
-            msg = 'Password must contain alphanumber with specialcharacters !'
-        elif not re.match(r'^(?:(?:\+|0{0,2})91(\s*[\ -]\s*)?|[0]?)?[789]\d{9}|(\d[ -]?){10}\d$', phone):
-            msg = 'Invalid phone number and starts with +91 !'
-        elif not re.match(r'^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$',
-                          userip):
-            msg = 'Invalid ip address format !'
-        elif not re.match(r'^(19|20)\d\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])$', date):
-            msg = 'Invalid date format !'
-        elif not username or not password or not email or not phone or not userip or not date:
-            msg = 'Please fill out the fields !'
-
-        else:
-            cursor = mysql.connection.cursor()
-            # UserId Pattern:-
-            cursor.execute("SELECT USER_SIGNUP_ID FROM user_signup")
-            lastid = cursor.rowcount
-            print('----------------------')
-            print("Last Id is: " + str(lastid))
-            lastid += 1
-            pattern = 'US000'
-            # add_value = 00
-            # pattern += 1 # pattern incremnting always by 1:-
-            id_value = pattern + str(lastid)
-            cursor.execute(
-                "insert into user_signup(user_signup_id,USER_NAME,USER_MAIL_ID,USER_PHONE_NUMBER,USER_PASSWORD,USER_IP,"
-                "USER_DATE_CREATED) VALUES(%s,%s,%s,%s,%s,%s,%s)",
-                (id_value, username, email, phone, password, userip, date))
-            mysql.connection.commit()
-            # details = cur.fetchall()
-           # logging.info("successfully registred")
-            return "successfully inserted", 200
-        return msg
-    return "invalid parameters"
-
-
-# MAIN app:-
-if __name__ == "__main__":
-    app.run(debug=True)
-
-################################################ END CODE ##############################################################
-
-
 """
 @app.route('/users/create', methods=['POST'])
 def register():
@@ -103,7 +18,7 @@ def register():
         elif not username or not password or not email:
             msg = 'Please fill out the fields !'
         else:
-            
+
             # UserId Pattern:-
             lastid = cursor.execute("SELECT USER_SIGNUP_ID FROM user_signup")
             # lastid = cur.rowcount
@@ -114,7 +29,7 @@ def register():
             # add_value = 00
             # pattern += 1 # pattern incremnting always by 1:-
             id_value = pattern + str(lastid)
-            
+
             cursor.execute("insert into user_signup(USER_NAME,USER_PASSWORD,USER_MAIL_ID) VALUES(%s,%s,%s)", (username, password, email))
             mysql.connection.commit()
             msg = 'You have successfully registered !'
