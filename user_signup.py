@@ -74,7 +74,7 @@ def register():
 
             # Insert Code:-
             cursor.execute(
-                "insert into user_signup(user_signup_id,USER_NAME,USER_MAIL_ID,USER_PHONE_NUMBER,USER_PASSWORD,USER_IP,USER_DEVICE,"
+                "insert into user_signup(USER_SIGNUP_ID, USER_NAME, USER_MAIL_ID, USER_PHONE_NUMBER, USER_PASSWORD, USER_IP, USER_DEVICE,"
                 "USER_DATE_CREATED) VALUES(%s,%s,%s,%s,%s,%s,%s,%s)",
                 (id_value, username, email, phone, password, IPAddr, hostname, date))
             mysql.connection.commit()

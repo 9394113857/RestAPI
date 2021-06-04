@@ -22,7 +22,7 @@ mysql = MySQL(app)
 # User_Specialization:-
 # create in postman by using jsonify:-
 @app.route('/specializations/create', methods=['POST'])
-def register():
+def specialization():
     if 'splid' in request.json and 'userid' in request.json \
             and 'splname' in request.json:
 

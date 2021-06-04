@@ -22,7 +22,7 @@ mysql = MySQL(app)
 # User_Department:-
 # create in postman by using jsonify:-
 @app.route('/departments/create', methods=['POST'])
-def register():
+def departments():
     if 'id' in request.json and 'userid' in request.json \
             and 'deptid' in request.json and 'deptname' in request.json:
 

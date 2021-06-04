@@ -22,7 +22,7 @@ mysql = MySQL(app)
 # User_Qualification:-
 # create in postman by using jsonify:-
 @app.route('/qualifications/create', methods=['POST'])
-def register():
+def qualification():
     if 'qualid' in request.json and 'userid' in request.json \
             and 'qualname' in request.json and 'instname' in request.json:
 
