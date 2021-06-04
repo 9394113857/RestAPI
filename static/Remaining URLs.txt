@@ -1,0 +1,66 @@
+---------------
+5 Tables Done:-
+---------------
+
+# User_Department:-
+http://127.0.0.1:5000/departments/create === POST
+Body---> Raw----> json
+{
+    "id": "1",
+    "userid": "1",
+    "deptid": "1",
+    "deptname": "name 1"
+}
+
+======================
+
+# User_Hospital:-
+http://127.0.0.1:5000/hospitals/create === POST
+Body---> Raw----> json
+{
+    "hospitalid": "1",
+    "userid": "1",    
+    "hospitalname": "name 1"
+}
+
+======================
+
+# User_Qualification:-
+http://127.0.0.1:5000/qualifications/create === POST
+Body---> Raw----> json
+{
+    "qualid": "1",
+    "userid": "1",    
+    "qualname": "name 1",
+	"instname": "name 1"
+}
+
+======================
+
+# 2.User_Registration:-
+http://127.0.0.1:5000/registrations/create === POST
+Body---> Raw----> json
+{
+    "regid": 1,
+    "age": 1,
+	"date": "2021-06-03"
+}
+
+======================
+
+# User_Specialization:-
+http://127.0.0.1:5000/specializations/create === POST
+Body---> Raw----> json
+{
+    "splid": "1",
+    "userid": "1",    
+    "splname": "specialization name 1"
+}
+
+
+
+
+
+
+
+
