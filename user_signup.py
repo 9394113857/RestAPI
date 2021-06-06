@@ -56,16 +56,17 @@ def register():
 
         else:
             cursor = mysql.connection.cursor()
-            # UserId Pattern:-
-            cursor.execute("SELECT USER_SIGNUP_ID FROM user_signup")
-            lastid = cursor.rowcount
-            print('----------------------')
-            print("Last Id is: " + str(lastid))
-            lastid += 1
+
+            # UserId Pattern for Insert Operation:-
+            cursor.execute("SELECT USER_ID FROM user_signup")
+            last_user_id = cursor.rowcount
+            print('----------------------------------')
+            print("Last Inserted ID is: " + str(last_user_id))
             pattern = 'US000' # pattern = ooo
+            last_user_id += 1
             # add_value = 00
             # pattern += 1 # pattern incremnting always by 1:-
-            user_id = pattern + str(lastid)
+            user_id = pattern + str(last_user_id) # pass 'user_id' value in place holder exactly
             # User Id pattern Code End #
 
             # Python Program to Get IP Address and Device Name:-
@@ -74,11 +75,17 @@ def register():
             #print("Your Computer Name is:" + hostname)
             #print("Your Computer IP Address is:" + IPAddr)
 
-            # Insert Code:-
+            # Inserting Values via placeholders like '%s' using exceute() of cursor object:-
             cursor.execute(
                 "insert into user_signup(USER_SIGNUP_ID, USER_ID, USER_NAME, USER_MAIL_ID, USER_PHONE_NUMBER, USER_PASSWORD, USER_IP, USER_DEVICE, USER_DATE_CREATED) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s)",
                 (signup_id, user_id, username, mail_id, user_phone_number, user_password, IPAddr, hostname, date))
             mysql.connection.commit()
+            # Current Inserted USER_ID:-
+            cursor.execute("SELECT USER_ID FROM user_signup")
+            current_user_id = cursor.rowcount
+            print('----------------------------------')
+            print("Current Inserted ID is: " + str(current_user_id))
+            print('----------------------------------')
             # details = cur.fetchall()
            # logging.info("successfully registred")
             return "successfully inserted", 200
@@ -96,3 +103,19 @@ if __name__ == "__main__":
 
 ################################################ END CODE ##############################################################
 
+
+# Post Man:-
+"""
+Working URL Now:-
+POST:-
+http://127.0.0.1:5000/users/create 
+Body---> Raw----> json
+{
+    "signup_id" :          1 ,
+    "username" :           "Raghu",
+    "mail_id" :            "raghunadh@gmail.com",
+    "user_phone_number" :  "9394113857",
+    "user_password" :      "raghu123",
+    "date" :               "2021-06-06"
+}
+"""
