@@ -23,17 +23,17 @@ mysql = MySQL(app)
 # create in postman by using jsonify:-
 @app.route('/qualifications/create', methods=['POST'])
 def qualification():
-    if 'qualid' in request.json and 'userid' in request.json \
-            and 'qualname' in request.json and 'instname' in request.json:
+    if 'qualid' in request.json and 'qualname' in request.json and 'instname' in request.json\
+            and 'procurement_year' in request.json:
 
         qualid = request.json['qualid']
-        userid = request.json['userid']
         qualname = request.json['qualname']
         instname = request.json['instname']
+        procurement_year = request.json['procurement_year']
 
         # Cursor:-
         cursor = mysql.connection.cursor()
-        cursor.execute('SELECT * FROM user_qualifiaction WHERE USER_ID = % s', (userid,))
+        cursor.execute('SELECT * FROM user_qualifiaction WHERE USER_QUAL_ID = % s', (qualid,))
         account = cursor.fetchone()
         if account:
             msg = 'Account already exists !'
@@ -41,12 +41,12 @@ def qualification():
             msg = 'Qualification Name name must contain only characters and numbers !'
         elif not re.match(r'[A-Za-z0-9]+', instname): # perfect
             msg = 'Institution Name must contain only characters and numbers !'
-        elif not qualid or not userid or not qualname or not instname:
+        elif not qualid or not qualname or not instname or not procurement_year:
             msg = 'Please fill out the fields !'
 
         else:
             cursor = mysql.connection.cursor()
-            '''
+
             # UserId Pattern:-
             cursor.execute("SELECT USER_ID FROM user_qualifiaction")
             lastid = cursor.rowcount
@@ -56,9 +56,9 @@ def qualification():
             pattern = 'US000' # pattern = ooo
             # add_value = 00
             # pattern += 1 # pattern incremnting always by 1:-
-            id_value = pattern + str(lastid)
+            user_id = pattern + str(lastid)
             # User Id pattern Code End #
-            '''
+
             # Python Program to Get IP Address and Device Name:-
             hostname = socket.gethostname()
             IPAddress = socket.gethostbyname(hostname)
@@ -67,8 +67,8 @@ def qualification():
 
             # Insert Code:-
             cursor.execute(
-                "insert into user_qualifiaction(USER_QUAL_ID,USER_ID,USER_QUALIFICATION_NAME,INSTITUTE_NAME,USER_IP,USER_DEVICE,) "
-                "VALUES(%s,%s,%s,%s,%s,%s)",(qualid, userid, qualname, instname, IPAddress, hostname))
+                "insert into user_qualifiaction(USER_QUAL_ID, USER_ID, USER_QUALIFICATION_NAME, INSTITUTE_NAME, PROCUREMENT_YEAR, USER_IP, USER_DEVICE) "
+                "VALUES(%s,%s,%s,%s,%s,%s,%s)",(qualid, user_id, qualname, instname, procurement_year, IPAddress, hostname))
             mysql.connection.commit()
             # details = cur.fetchall()
            # logging.info("successfully registred")

@@ -64,7 +64,7 @@ def patient_health():
             lastid += 1
             pattern = 'US000' # pattern = ooo
             # pattern += 1 # pattern incremnting always by 1:-
-            id_value = pattern + str(lastid)
+            user_id = pattern + str(lastid)
             # User Id pattern Code End #
 
             # Python Program to Get IP Address and Device Name:-
@@ -76,7 +76,7 @@ def patient_health():
             # Insert Code:-
             cursor.execute(
                 "insert into patient_health(PATIENT_HEALTH_ID, USER_ID, PATIENT_ID, BLOOD_GROUP, PATIENT_AGE, PATIENT_WEIGHT, PATIENT_HEIGHT, PATIENT_SYSTOLIC_BP, PATIENT_DYASTOLIC_BP, PATIENT_TEMPARATURE, CREATED_BY, IP_ADDRESS, USER_DEVICE, CREATED_DATE) "
-                "VALUES(%s,%s,%s,%s,%s,%s)", (patient_id, id_value, patient_id, blood_group, patient_age, patient_weight, patient_height, systolic_bp, dyastolic_bp, patient_temperature, created_by, IPAddress, hostname, date))
+                "VALUES(%s,%s,%s,%s,%s,%s)", (patient_id, user_id, patient_id, blood_group, patient_age, patient_weight, patient_height, systolic_bp, dyastolic_bp, patient_temperature, created_by, IPAddress, hostname, date))
             mysql.connection.commit()
             # details = cur.fetchall()
            # logging.info("successfully registred")

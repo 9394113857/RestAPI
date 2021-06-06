@@ -52,7 +52,7 @@ def api_logs():
             lastid += 1
             pattern = 'US000' # pattern = ooo
             # pattern += 1 # pattern incremnting always by 1:-
-            id_value = pattern + str(lastid)
+            user_id = pattern + str(lastid)
             # User Id pattern Code End #
 
             # Python Program to Get IP Address and Device Name:-
@@ -64,7 +64,7 @@ def api_logs():
             # Insert Code:-
             cursor.execute(
                 "insert into api_logs(API_ID, USER_ID, API_NAME, ERROR_CODE, USER_IP, USER_DEVICE) "
-                "VALUES(%s,%s,%s,%s,%s,%s)", (api_id, id_value, api_name, error_code, IPAddress, hostname))
+                "VALUES(%s,%s,%s,%s,%s,%s)", (api_id, user_id, api_name, error_code, IPAddress, hostname))
             mysql.connection.commit()
             # details = cur.fetchall()
            # logging.info("successfully registred")

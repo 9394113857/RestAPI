@@ -52,7 +52,7 @@ def logs():
             lastid += 1
             pattern = 'US000' # pattern = ooo
             # pattern += 1 # pattern incremnting always by 1:-
-            id_value = pattern + str(lastid)
+            user_id = pattern + str(lastid)
             # User Id pattern Code End #
 
             # Python Program to Get IP Address and Device Name:-
@@ -64,7 +64,7 @@ def logs():
             # Insert Code:-
             cursor.execute(
                 "insert into logs(LOG_ID, USER_ID, LOGIN_EMAIL_ID, LOGIN_TIME, LOGOUT_TIME, USER_IP, USER_DEVICE) "
-                "VALUES(%s,%s,%s,%s,%s,%s,%s)", (log_id, id_value, email_id, login_time, logout_time, IPAddress, hostname))
+                "VALUES(%s,%s,%s,%s,%s,%s,%s)", (log_id, user_id, email_id, login_time, logout_time, IPAddress, hostname))
             mysql.connection.commit()
             # details = cur.fetchall()
            # logging.info("successfully registred")

@@ -54,7 +54,7 @@ def sympton():
             lastid += 1
             pattern = 'US000' # pattern = ooo
             # pattern += 1 # pattern incremnting always by 1:-
-            id_value = pattern + str(lastid)
+            user_id = pattern + str(lastid)
             # User Id pattern Code End #
 
             # Python Program to Get IP Address and Device Name:-
@@ -66,7 +66,7 @@ def sympton():
             # Insert Code:-
             cursor.execute(
                 "insert into symptom(SESSION_ID, USER_ID, SYMPTOM_ID, SYMPTOM_NAME, INPUT, USER_IP, USER_DEVICE) "
-                "VALUES(%s,%s,%s,%s,%s,%s,%s)", (session_id, id_value, sympton_id, sympton_name, input, IPAddress, hostname))
+                "VALUES(%s,%s,%s,%s,%s,%s,%s)", (session_id, user_id, sympton_id, sympton_name, input, IPAddress, hostname))
             mysql.connection.commit()
             # details = cur.fetchall()
            # logging.info("successfully registred")

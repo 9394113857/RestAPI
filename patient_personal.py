@@ -69,7 +69,7 @@ def patient_personal():
             lastid += 1
             pattern = 'US000' # pattern = ooo
             # pattern += 1 # pattern incremnting always by 1:-
-            id_value = pattern + str(lastid)
+            user_id = pattern + str(lastid)
             # User Id pattern Code End #
 
             # Python Program to Get IP Address and Device Name:-
@@ -81,7 +81,7 @@ def patient_personal():
             # Insert Code:-
             cursor.execute(
                 "insert into user_registration(PATIENT_ID, USER_ID, PATIENT_NAME, PHONE_NUMBER, MAIL_ID, FLAT_NO, STREET_NAME, CITY_NAME, STATE_NAME, COUNTRY_NAME, ZIP_CODE, DATE_OF_BIRTH, CREATED_BY, IP_ADDRESS, USER_DEVICE, CREATED_DATE) "
-                "VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", (patient_id, id_value, patient_name, phone, mail_id, flat_no, street_name, city_name, state_name, country_name, zip_code, date_of_birth, created_by, IPAddress, hostname, date))
+                "VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", (patient_id, user_id, patient_name, phone, mail_id, flat_no, street_name, city_name, state_name, country_name, zip_code, date_of_birth, created_by, IPAddress, hostname, date))
             mysql.connection.commit()
             # details = cur.fetchall()
            # logging.info("successfully registred")

@@ -23,27 +23,29 @@ mysql = MySQL(app)
 # create in postman by using jsonify:-
 @app.route('/hospitals/create', methods=['POST'])
 def hospital():
-    if 'hospitalid' in request.json and 'userid' in request.json \
-            and 'hospitalname' in request.json:
+    if 'hospitalid' in request.json and 'hospitalname' in request.json and 'hospital_city'\
+            and 'hospital_country' in request.json and 'hospital_zip_code' in request.json:
 
         hospitalid = request.json['hospitalid']
-        userid = request.json['userid']
         hospitalname = request.json['hospitalname']
+        hospital_city = request.json['hospital_city']
+        hospital_country = request.json['hospital_country']
+        hospital_zip_code = request.json['hospital_zip_code']
 
         # Cursor:-
         cursor = mysql.connection.cursor()
-        cursor.execute('SELECT * FROM user_hospital WHERE USER_ID = % s', (userid,))
+        cursor.execute('SELECT * FROM user_hospital WHERE USER_HOSPITAL_ID = % s', (hospitalid,))
         account = cursor.fetchone()
         if account:
             msg = 'Account already exists !'
         elif not re.match(r'[A-Za-z0-9]+', hospitalname):
             msg = 'Hospital Name must contain only characters and numbers !'
-        elif not hospitalid or not userid or not hospitalname:
+        elif not hospitalid or not hospitalname or not hospital_city or not hospital_country or not hospital_zip_code:
             msg = 'Please fill out the fields !'
 
         else:
             cursor = mysql.connection.cursor()
-            '''
+
             # UserId Pattern:-
             cursor.execute("SELECT USER_ID FROM user_hospital")
             lastid = cursor.rowcount
@@ -53,9 +55,9 @@ def hospital():
             pattern = 'US000' # pattern = ooo
             # add_value = 00
             # pattern += 1 # pattern incremnting always by 1:-
-            id_value = pattern + str(lastid)
+            user_id = pattern + str(lastid)
             # User Id pattern Code End #
-            '''
+
             # Python Program to Get IP Address and Device Name:-
             hostname = socket.gethostname()
             IPAddress = socket.gethostbyname(hostname)
@@ -64,8 +66,8 @@ def hospital():
 
             # Insert Code:-
             cursor.execute(
-                "insert into user_hospital(USER_Hm  mOSPITAL_ID,USER_ID,HOSPITAL_NAME,USER_IP,USER_DEVICE,) VALUES(%s,%s,%s,%s,%s)",
-                (hospitalid, userid, hospitalname, IPAddress, hostname))
+                "insert into user_hospital(USER_HOSPITAL_ID, USER_ID, HOSPITAL_NAME, HOSPITAL_CITY, HOSPPITAL_COUNTRY, HOSPITAL_ZIP_CODE, USER_IP, USER_DEVICE) VALUES(%s,%s,%s,%s,%s,%s,%s,%s)",
+                (hospitalid, user_id, hospitalname, hospital_city, hospital_country, hospital_zip_code, IPAddress, hostname))
             mysql.connection.commit()
             # details = cur.fetchall()
            # logging.info("successfully registred")

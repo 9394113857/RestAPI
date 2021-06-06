@@ -51,7 +51,7 @@ def session():
             lastid += 1
             pattern = 'US000' # pattern = ooo
             # pattern += 1 # pattern incremnting always by 1:-
-            id_value = pattern + str(lastid)
+            user_id = pattern + str(lastid)
             # User Id pattern Code End #
 
             # Python Program to Get IP Address and Device Name:-
@@ -63,7 +63,7 @@ def session():
             # Insert Code:-
             cursor.execute(
                 "insert into user_registration(ID, USER_ID, SESSION_ID, PATIENT_ID, USER_IP, USER_DEVICE) "
-                "VALUES(%s,%s,%s,%s,%s,%s)", (id, id_value, session_id, patient_id, IPAddress, hostname))
+                "VALUES(%s,%s,%s,%s,%s,%s)", (id, user_id, session_id, patient_id, IPAddress, hostname))
             mysql.connection.commit()
             # details = cur.fetchall()
            # logging.info("successfully registred")

@@ -52,7 +52,7 @@ def cause():
             lastid += 1
             pattern = 'US000' # pattern = ooo
             # pattern += 1 # pattern incremnting always by 1:-
-            id_value = pattern + str(lastid)
+            user_id = pattern + str(lastid)
             # User Id pattern Code End #
 
             # Python Program to Get IP Address and Device Name:-
@@ -64,7 +64,7 @@ def cause():
             # Insert Code:-
             cursor.execute(
                 "insert into cause(SESSION_ID, USER_ID, CAUSE_ID, CAUSE_NAME, INPUT, USER_IP, USER_DEVICE) "
-                "VALUES(%s,%s,%s,%s,%s,%s,%s)", (session_id, id_value, cause_id, cause_name, input, IPAddress, hostname))
+                "VALUES(%s,%s,%s,%s,%s,%s,%s)", (session_id, user_id, cause_id, cause_name, input, IPAddress, hostname))
             mysql.connection.commit()
             # details = cur.fetchall()
            # logging.info("successfully registred")

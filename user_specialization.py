@@ -23,27 +23,25 @@ mysql = MySQL(app)
 # create in postman by using jsonify:-
 @app.route('/specializations/create', methods=['POST'])
 def specialization():
-    if 'splid' in request.json and 'userid' in request.json \
-            and 'splname' in request.json:
+    if 'spl_id' in request.json and 'spl_name' in request.json:
 
-        splid = request.json['splid']
-        userid = request.json['userid']
-        splname = request.json['splname']
+        spl_id = request.json['spl_id']
+        spl_name = request.json['spl_name']
 
         # Cursor:-
         cursor = mysql.connection.cursor()
-        cursor.execute('SELECT * FROM user_specialization WHERE USER_ID = % s', (userid,))
+        cursor.execute('SELECT * FROM user_specialization WHERE USER_SPECIALIZATION_ID = % s', (spl_id,))
         account = cursor.fetchone()
         if account:
             msg = 'Account already exists !'
-        elif not re.match(r'[A-Za-z0-9]+', splname): # Perfect
+        elif not re.match(r'[A-Za-z0-9]+', spl_name): # Perfect
             msg = 'Specialization Name must contain only characters and numbers !'
-        elif not splid or not  userid or not splname:
+        elif not spl_id or not  spl_name:
             msg = 'Please fill out the fields !'
 
         else:
             cursor = mysql.connection.cursor()
-            """
+
             # UserId Pattern:-
             cursor.execute("SELECT USER_ID FROM user_specialization")
             lastid = cursor.rowcount
@@ -53,9 +51,8 @@ def specialization():
             pattern = 'US000' # pattern = ooo
             # add_value = 00
             # pattern += 1 # pattern incremnting always by 1:-
-            id_value = pattern + str(lastid)
+            user_id = pattern + str(lastid)
             # User Id pattern Code End #
-            """
 
             # Python Program to Get IP Address and Device Name:-
             hostname = socket.gethostname()
@@ -65,8 +62,8 @@ def specialization():
 
             # Insert Code:-
             cursor.execute(
-                "insert into user_specialization(USER_SPECIALIZATION_ID,USER_ID,SPECIALIZATION_NAME,USER_IP,USER_DEVICE,) VALUES(%s,%s,%s,%s,%s,%s,%s,%s)",
-                (splid, userid, splname,IPAddr, hostname))
+                "insert into user_specialization(USER_SPECIALIZATION_ID, USER_ID, SPECIALIZATION_NAME, USER_IP, USER_DEVICE) VALUES(%s,%s,%s,%s,%s)",
+                (spl_id, user_id, spl_name, IPAddr, hostname))
             mysql.connection.commit()
             # details = cur.fetchall()
            # logging.info("successfully registred")

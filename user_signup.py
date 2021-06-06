@@ -7,6 +7,8 @@ import socket
 from flask import request, jsonify, Flask, logging
 from flask_mysqldb import MySQL
 
+import logging
+
 # 3.validation framework:-
 
 app = Flask(__name__)
@@ -23,33 +25,33 @@ mysql = MySQL(app)
 # create in postman by using jsonify:-
 @app.route('/users/create', methods=['POST'])
 def register():
-    if 'username' in request.json and 'password' in request.json \
-            and 'email' in request.json and 'phone' in request.json and 'date' in request.json:
+    if 'signup_id' in request.json and 'username' in request.json and 'mail_id' in request.json\
+            and 'user_phone_number' in request.json and 'user_password' and 'date' in request.json:
 
+        signup_id = request.json['signup_id']
         username = request.json['username']
-        email = request.json['email']
-        phone = request.json['phone']
-        password = request.json['password']
+        mail_id = request.json['mail_id']
+        user_phone_number = request.json['user_phone_number']
+        user_password = request.json['user_password']
         date = request.json['date']
 
         # Cursor:-
         cursor = mysql.connection.cursor()
-        cursor.execute('SELECT * FROM user_signup WHERE USER_NAME = % s', (username,))
+        cursor.execute('SELECT * FROM user_signup WHERE USER_SIGNUP_ID = % s', (signup_id,))
         account = cursor.fetchone()
         if account:
             msg = 'Account already exists !'
-        elif not re.match(r'[^@]+@[^@]+\.[^@]+', email):
+        elif not re.match(r'[^@]+@[^@]+\.[^@]+', mail_id):
             msg = 'Invalid email address !'
         elif not re.match(r'[A-Za-z0-9]+', username):
             msg = 'Username must contain only characters and numbers !'
-        elif not re.match(r'^[A-Za-z0-9@#$%^&+=]{8,32}',
-                          password):
+        elif not re.match(r'^[A-Za-z0-9@#$%^&+=]{8,32}', user_password):
             msg = 'Password must contain alphanumber with specialcharacters !'
-        elif not re.match(r'^(?:(?:\+|0{0,2})91(\s*[\ -]\s*)?|[0]?)?[789]\d{9}|(\d[ -]?){10}\d$', phone):
+        elif not re.match(r'^(?:(?:\+|0{0,2})91(\s*[\ -]\s*)?|[0]?)?[789]\d{9}|(\d[ -]?){10}\d$', user_phone_number):
             msg = 'Invalid phone number and starts with +91 !'
         elif not re.match(r'^(19|20)\d\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])$', date):
             msg = 'Invalid date format !'
-        elif not username or not password or not email or not phone or not date:
+        elif not signup_id or not username or not mail_id or not user_phone_number or not user_password or not date:
             msg = 'Please fill out the fields !'
 
         else:
@@ -63,7 +65,7 @@ def register():
             pattern = 'US000' # pattern = ooo
             # add_value = 00
             # pattern += 1 # pattern incremnting always by 1:-
-            id_value = pattern + str(lastid)
+            user_id = pattern + str(lastid)
             # User Id pattern Code End #
 
             # Python Program to Get IP Address and Device Name:-
@@ -74,9 +76,8 @@ def register():
 
             # Insert Code:-
             cursor.execute(
-                "insert into user_signup(USER_SIGNUP_ID, USER_NAME, USER_MAIL_ID, USER_PHONE_NUMBER, USER_PASSWORD, USER_IP, USER_DEVICE,"
-                "USER_DATE_CREATED) VALUES(%s,%s,%s,%s,%s,%s,%s,%s)",
-                (id_value, username, email, phone, password, IPAddr, hostname, date))
+                "insert into user_signup(USER_SIGNUP_ID, USER_ID, USER_NAME, USER_MAIL_ID, USER_PHONE_NUMBER, USER_PASSWORD, USER_IP, USER_DEVICE, USER_DATE_CREATED) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s)",
+                (signup_id, user_id, username, mail_id, user_phone_number, user_password, IPAddr, hostname, date))
             mysql.connection.commit()
             # details = cur.fetchall()
            # logging.info("successfully registred")
