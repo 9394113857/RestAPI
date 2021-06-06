@@ -7,8 +7,34 @@ import socket
 from flask import request, jsonify, Flask, logging
 from flask_mysqldb import MySQL
 
-# 3.validation framework:-
+#importing module
+import logging
 
+#Create and configure logger
+logging.basicConfig(filename="F:\Restful-API's\RestAPI\log files\Tests.log",
+					format='%(asctime)s %(message)s',
+					filemode='a')
+
+#Creating an object
+logger=logging.getLogger()
+
+#Setting the threshold of logger to DEBUG
+logger.setLevel(logging.DEBUG)
+
+#Test messages
+logger.info('-----------------------------')
+logger.info("User_Tests script started Now:-")
+"""
+logger.debug("Harmless debug Message")
+logger.info("Just an information")
+logger.warning("Its a Warning")
+logger.error("Did you try to divide by zero")
+logger.critical("Internet is down")
+"""
+
+
+
+# Flask App Initialization:-
 app = Flask(__name__)
 
 app.config['MYSQL_HOST'] = 'localhost'
@@ -78,6 +104,21 @@ if __name__ == "__main__":
     app.run(debug=True)
 
 ################################################ END CODE ##############################################################
+
+# Post Man:-
+"""
+Working URL Now:-
+POST:-
+http://127.0.0.1:5000/user_tests/create 
+Body---> Raw----> json
+{
+    "session_id"    :  "1",
+    "test_id"       :  1,
+    "test_name"     :  "raghunadh28",
+    "disease_name"  :  "Bone Cancer"
+}
+"""
+
 
 """
 Commented Code:-

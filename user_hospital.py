@@ -7,8 +7,34 @@ import socket
 from flask import request, jsonify, Flask, logging
 from flask_mysqldb import MySQL
 
-# 3.validation framework:-
+#importing module
+import logging
 
+#Create and configure logger
+logging.basicConfig(filename="F:\Restful-API's\RestAPI\log files\Hospital.log",
+					format='%(asctime)s %(message)s',
+					filemode='a')
+
+#Creating an object
+logger=logging.getLogger()
+
+#Setting the threshold of logger to DEBUG
+logger.setLevel(logging.DEBUG)
+
+#Test messages
+logger.info('-----------------------------')
+logger.info("User_Hospital script started Now:-")
+"""
+logger.debug("Harmless debug Message")
+logger.info("Just an information")
+logger.warning("Its a Warning")
+logger.error("Did you try to divide by zero")
+logger.critical("Internet is down")
+"""
+
+
+
+# Flask App Initialization:-
 app = Flask(__name__)
 
 app.config['MYSQL_HOST'] = 'localhost'
@@ -70,7 +96,7 @@ def hospital():
                 (hospitalid, user_id, hospitalname, hospital_city, hospital_country, hospital_zip_code, IPAddress, hostname))
             mysql.connection.commit()
             # details = cur.fetchall()
-           # logging.info("successfully registred")
+            logger.info("successfully registred")
             return "successfully inserted", 200
         return msg
     return "invalid parameters"
@@ -82,3 +108,17 @@ if __name__ == "__main__":
 
 ################################################ END CODE ##############################################################
 
+# Post Man:-
+"""
+Working URL Now:-
+POST:-
+http://127.0.0.1:5000/hospitals/create 
+Body---> Raw----> json
+{
+    "hospitalid"        : 1,
+    "hospitalname"      : "Apollo Hospitals",
+    "hospital_city"     : "Hyderabad",
+    "hospital_country"  : "India",
+    "hospital_zip_code" : "500072"
+}
+"""

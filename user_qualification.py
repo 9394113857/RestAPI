@@ -7,8 +7,34 @@ import socket
 from flask import request, jsonify, Flask, logging
 from flask_mysqldb import MySQL
 
-# 3.validation framework:-
+#importing module
+import logging
 
+#Create and configure logger
+logging.basicConfig(filename="F:\Restful-API's\RestAPI\log files\Qualification.log",
+					format='%(asctime)s %(message)s',
+					filemode='a')
+
+#Creating an object
+logger=logging.getLogger()
+
+#Setting the threshold of logger to DEBUG
+logger.setLevel(logging.DEBUG)
+
+#Test messages
+logger.info('-----------------------------')
+logger.info("User_Qualification script started Now:-")
+"""
+logger.debug("Harmless debug Message")
+logger.info("Just an information")
+logger.warning("Its a Warning")
+logger.error("Did you try to divide by zero")
+logger.critical("Internet is down")
+"""
+
+
+
+# Flask App Initialization:-
 app = Flask(__name__)
 
 app.config['MYSQL_HOST'] = 'localhost'
@@ -71,7 +97,7 @@ def qualification():
                 "VALUES(%s,%s,%s,%s,%s,%s,%s)",(qualid, user_id, qualname, instname, procurement_year, IPAddress, hostname))
             mysql.connection.commit()
             # details = cur.fetchall()
-           # logging.info("successfully registred")
+            logger.info("successfully registred")
             return "successfully inserted", 200
         return msg
     return "invalid parameters"
@@ -83,3 +109,16 @@ if __name__ == "__main__":
 
 ################################################ END CODE ##############################################################
 
+# Post Man:-
+"""
+Working URL Now:-
+POST:-
+http://127.0.0.1:5000/qualifications/create 
+Body---> Raw----> json
+{
+    "qualid"           : 1,
+    "qualname"         : "MBBS",
+    "instname"         : "APOLLO HEALTH CARE CITY",
+    "procurement_year" : "2021-06-06"
+}
+"""

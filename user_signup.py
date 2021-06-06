@@ -7,10 +7,34 @@ import socket
 from flask import request, jsonify, Flask, logging
 from flask_mysqldb import MySQL
 
+#importing module
 import logging
 
-# 3.validation framework:-
+#Create and configure logger
+logging.basicConfig(filename="F:\Restful-API's\RestAPI\log files\Signup.log",
+					format='%(asctime)s %(message)s',
+					filemode='a')
 
+#Creating an object
+logger=logging.getLogger()
+
+#Setting the threshold of logger to DEBUG
+logger.setLevel(logging.DEBUG)
+
+#Test messages
+logger.info('-----------------------------')
+logger.info("User_Signup script started Now:-")
+"""
+logger.debug("Harmless debug Message")
+logger.info("Just an information")
+logger.warning("Its a Warning")
+logger.error("Did you try to divide by zero")
+logger.critical("Internet is down")
+"""
+
+
+
+# Flask App Initialization:-
 app = Flask(__name__)
 
 app.config['MYSQL_HOST'] = 'localhost'
@@ -19,7 +43,6 @@ app.config['MYSQL_PASSWORD'] = 'raghu'
 app.config['MYSQL_DB'] = 'clinicalfirst'
 
 mysql = MySQL(app)
-
 
 # User_Signup:-
 # create in postman by using jsonify:-
@@ -87,7 +110,7 @@ def register():
             print("Current Inserted ID is: " + str(current_user_id))
             print('----------------------------------')
             # details = cur.fetchall()
-           # logging.info("successfully registred")
+            logger.info("successfully registred")
             return "successfully inserted", 200
         return msg
     return "invalid parameters"
@@ -111,10 +134,10 @@ POST:-
 http://127.0.0.1:5000/users/create 
 Body---> Raw----> json
 {
-    "signup_id" :          1 ,
+    "signup_id" :          2 ,
     "username" :           "Raghu",
-    "mail_id" :            "raghunadh@gmail.com",
-    "user_phone_number" :  "9394113857",
+    "mail_id" :            "raghunadh2@gmail.com",
+    "user_phone_number" :  "9394113852",
     "user_password" :      "raghu123",
     "date" :               "2021-06-06"
 }

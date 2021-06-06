@@ -7,8 +7,34 @@ import socket
 from flask import request, jsonify, Flask, logging
 from flask_mysqldb import MySQL
 
-# 3.validation framework:-
+#importing module
+import logging
 
+#Create and configure logger
+logging.basicConfig(filename="F:\Restful-API's\RestAPI\log files\Registration.log",
+					format='%(asctime)s %(message)s',
+					filemode='a')
+
+#Creating an object
+logger=logging.getLogger()
+
+#Setting the threshold of logger to DEBUG
+logger.setLevel(logging.DEBUG)
+
+#Test messages
+logger.info('-----------------------------')
+logger.info("User_Registration script started Now:-")
+"""
+logger.debug("Harmless debug Message")
+logger.info("Just an information")
+logger.warning("Its a Warning")
+logger.error("Did you try to divide by zero")
+logger.critical("Internet is down")
+"""
+
+
+
+# Flask App Initialization:-
 app = Flask(__name__)
 
 app.config['MYSQL_HOST'] = 'localhost'
@@ -85,7 +111,7 @@ def registration():
                 "VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", (reg_id, user_id, user_age, user_experience, user_gender, user_license_number, flat_no, street_name, city_name, state_name, country_name, zip_code, user_approved, IPAddress, hostname, date))
             mysql.connection.commit()
             # details = cur.fetchall()
-           # logging.info("successfully registred")
+            logger.info("successfully registred")
             return "successfully inserted", 200
         return msg
     return "invalid parameters"
@@ -96,6 +122,31 @@ if __name__ == "__main__":
     app.run(debug=True)
 
 ################################################ END CODE ##############################################################
+
+# Post Man:-
+"""
+Working URL Now:-
+POST:-
+http://127.0.0.1:5000/registrations/create 
+Body---> Raw----> json
+{
+    "reg_id"                :  1,
+    "user_age"              :  29,
+    "user_experience"       :  3.10,
+    "user_gender"           :  "MALE",
+    "user_license_number"   :  "INS-1992",
+    "flat_no"               :  "5-7-33",
+    "street_name"           :  "Sangeeth Nagar",
+    "city_name"             :  "HYD",
+    "state_name"            :  "TS",
+    "country_name"          :  "IND",
+    "zip_code"              :  500072,
+    "user_approved"         :  "2021-06-06",
+    "date"                  :  "2021-106-06"
+}
+"""
+
+
 
 """
 Commented Code:-
