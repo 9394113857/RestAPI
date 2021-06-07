@@ -107,12 +107,12 @@ if __name__ == "__main__":
 # Post Man:-
 """
 Working URL Now:-
-POST:-
+POST:- Inserting Values change spl_id every time.
 http://127.0.0.1:5000/specializations/create 
 Body---> Raw----> json
 {
     "spl_id"    : 1,
-    "spl_name"  : "Neuro-Surgeon"
+    "spl_name"  : "Neu"
 }
 """
 

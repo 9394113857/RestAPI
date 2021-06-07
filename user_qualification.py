@@ -49,25 +49,25 @@ mysql = MySQL(app)
 # create in postman by using jsonify:-
 @app.route('/qualifications/create', methods=['POST'])
 def qualification():
-    if 'qualid' in request.json and 'qualname' in request.json and 'instname' in request.json\
+    if 'qual_id' in request.json and 'qual_name' in request.json and 'inst_name' in request.json\
             and 'procurement_year' in request.json:
 
-        qualid = request.json['qualid']
-        qualname = request.json['qualname']
-        instname = request.json['instname']
+        qual_id = request.json['qual_id']
+        qual_name = request.json['qual_name']
+        inst_name = request.json['inst_name']
         procurement_year = request.json['procurement_year']
 
         # Cursor:-
         cursor = mysql.connection.cursor()
-        cursor.execute('SELECT * FROM user_qualifiaction WHERE USER_QUAL_ID = % s', (qualid,))
+        cursor.execute('SELECT * FROM user_qualifiaction WHERE USER_QUAL_ID = % s', (qual_id,))
         account = cursor.fetchone()
         if account:
             msg = 'Account already exists !'
-        elif not re.match(r'[A-Za-z0-9]+', qualname): # perfect
+        elif not re.match(r'[A-Za-z0-9]+', qual_name): # perfect
             msg = 'Qualification Name name must contain only characters and numbers !'
-        elif not re.match(r'[A-Za-z0-9]+', instname): # perfect
+        elif not re.match(r'[A-Za-z0-9]+', inst_name): # perfect
             msg = 'Institution Name must contain only characters and numbers !'
-        elif not qualid or not qualname or not instname or not procurement_year:
+        elif not qual_id or not qual_name or not inst_name or not procurement_year:
             msg = 'Please fill out the fields !'
 
         else:
@@ -94,7 +94,7 @@ def qualification():
             # Insert Code:-
             cursor.execute(
                 "insert into user_qualifiaction(USER_QUAL_ID, USER_ID, USER_QUALIFICATION_NAME, INSTITUTE_NAME, PROCUREMENT_YEAR, USER_IP, USER_DEVICE) "
-                "VALUES(%s,%s,%s,%s,%s,%s,%s)",(qualid, user_id, qualname, instname, procurement_year, IPAddress, hostname))
+                "VALUES(%s,%s,%s,%s,%s,%s,%s)",(qual_id, user_id, qual_name, inst_name, procurement_year, IPAddress, hostname))
             mysql.connection.commit()
             # details = cur.fetchall()
             logger.info("successfully registred")
@@ -112,13 +112,13 @@ if __name__ == "__main__":
 # Post Man:-
 """
 Working URL Now:-
-POST:-
+POST:- // Inserting Values change qual_id every time.
 http://127.0.0.1:5000/qualifications/create 
 Body---> Raw----> json
 {
-    "qualid"           : 1,
-    "qualname"         : "MBBS",
-    "instname"         : "APOLLO HEALTH CARE CITY",
-    "procurement_year" : "2021-06-06"
+    "qual_id"           : 1,
+    "qual_name"         : "MBBS",
+    "inst_name"         : "APOLLO HEALTH CARE CITY",
+    "procurement_year"  : "2021-06-07"
 }
 """

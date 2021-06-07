@@ -88,7 +88,7 @@ def test_result():
 
             # Insert Code:-
             cursor.execute(
-                "insert into user_registration(SESSION_ID, USER_ID, TEST_ID, TEST_RESULT, USER_IP, USER_DEVICE) "
+                "insert into test_result(SESSION_ID, USER_ID, TEST_ID, TEST_RESULT, USER_IP, USER_DEVICE) "
                 "VALUES(%s,%s,%s,%s,%s,%s)", (session_id, user_id, test_id, test_result, IPAddress, hostname))
             mysql.connection.commit()
             # details = cur.fetchall()
@@ -107,8 +107,8 @@ if __name__ == "__main__":
 # Post Man:-
 """
 Working URL Now:-
-POST:-
-http://127.0.0.1:5000/users/create 
+POST:- Inserting Values change session_id and test_id every time.
+http://127.0.0.1:5000/test_result/create 
 Body---> Raw----> json
 {
     "session_id"    : "1",

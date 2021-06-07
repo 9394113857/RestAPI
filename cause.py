@@ -106,7 +106,7 @@ if __name__ == "__main__":
 
 # Post Man:-
 """
-Working URL Now:-
+Working URL Now:- Inserting Values, Change session_id and cause_id every time
 POST:-
 http://127.0.0.1:5000/cause/create 
 Body---> Raw----> json
@@ -114,7 +114,7 @@ Body---> Raw----> json
     "session_id"    : "1",
     "cause_id"      : 1,
     "cause_name"    : "Blood Cancer",
-    "input"         : "9394113852"
+    "input"         : "1"
 }
 """
 

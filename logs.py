@@ -107,14 +107,14 @@ if __name__ == "__main__":
 # Post Man:-
 """
 Working URL Now:-
-POST:-
+POST:- Inserting Values change log_id every time.
 http://127.0.0.1:5000/logs/create 
 Body---> Raw----> json
 {
     "log_id"        :  1,
     "email_id"      :  "raghunadh@gmail.com",
-    "login_time"    :  "",
-    "logout_time"   :  ""
+    "login_time"    :  "2021-06-07 11:20:20",
+    "logout_time"   :  "2021-06-07 11:50:30"
 }
 """
 

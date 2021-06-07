@@ -49,24 +49,28 @@ mysql = MySQL(app)
 # create in postman by using jsonify:-
 @app.route('/hospitals/create', methods=['POST'])
 def hospital():
-    if 'hospitalid' in request.json and 'hospitalname' in request.json and 'hospital_city'\
-            and 'hospital_country' in request.json and 'hospital_zip_code' in request.json:
+    if 'hospital_id' in request.json and 'hospital_name' in request.json and 'hospital_city'\
+            and 'hospiatal_country' in request.json and 'hospital_zip_code' in request.json:
 
-        hospitalid = request.json['hospitalid']
-        hospitalname = request.json['hospitalname']
+        hospital_id = request.json['hospital_id']
+        hospital_name = request.json['hospital_name']
         hospital_city = request.json['hospital_city']
-        hospital_country = request.json['hospital_country']
+        hospiatal_country = request.json['hospiatal_country']
         hospital_zip_code = request.json['hospital_zip_code']
 
         # Cursor:-
         cursor = mysql.connection.cursor()
-        cursor.execute('SELECT * FROM user_hospital WHERE USER_HOSPITAL_ID = % s', (hospitalid,))
+        cursor.execute('SELECT * FROM user_hospital WHERE USER_HOSPITAL_ID = % s', (hospital_id,))
         account = cursor.fetchone()
         if account:
             msg = 'Account already exists !'
-        elif not re.match(r'[A-Za-z0-9]+', hospitalname):
+        elif not re.match(r'[A-Za-z0-9]+', hospital_name):
             msg = 'Hospital Name must contain only characters and numbers !'
-        elif not hospitalid or not hospitalname or not hospital_city or not hospital_country or not hospital_zip_code:
+        elif not re.match(r'[A-Za-z0-9]+', hospital_city):
+            msg = 'Hospital City must contain only characters and numbers !'
+        elif not re.match(r'[A-Za-z0-9]+', hospiatal_country):
+            msg = 'Hospital Country must contain only characters and numbers !'
+        elif not hospital_id or not hospital_name or not hospital_city or not hospiatal_country or not hospital_zip_code:
             msg = 'Please fill out the fields !'
 
         else:
@@ -93,7 +97,7 @@ def hospital():
             # Insert Code:-
             cursor.execute(
                 "insert into user_hospital(USER_HOSPITAL_ID, USER_ID, HOSPITAL_NAME, HOSPITAL_CITY, HOSPPITAL_COUNTRY, HOSPITAL_ZIP_CODE, USER_IP, USER_DEVICE) VALUES(%s,%s,%s,%s,%s,%s,%s,%s)",
-                (hospitalid, user_id, hospitalname, hospital_city, hospital_country, hospital_zip_code, IPAddress, hostname))
+                (hospital_id, user_id, hospital_name, hospital_city, hospiatal_country, hospital_zip_code, IPAddress, hostname))
             mysql.connection.commit()
             # details = cur.fetchall()
             logger.info("successfully registred")
@@ -111,14 +115,14 @@ if __name__ == "__main__":
 # Post Man:-
 """
 Working URL Now:-
-POST:-
+POST:- // Inserting Values change hospital_id every time.
 http://127.0.0.1:5000/hospitals/create 
 Body---> Raw----> json
 {
-    "hospitalid"        : 1,
-    "hospitalname"      : "Apollo Hospitals",
-    "hospital_city"     : "Hyderabad",
-    "hospital_country"  : "India",
-    "hospital_zip_code" : "500072"
+    "hospital_id"        : 1,
+    "hospital_name"      : "Apollo",
+    "hospital_city"      : "Hyd",
+    "hospiatal_country"  : "Ind",
+    "hospital_zip_code"  :  500072
 }
 """

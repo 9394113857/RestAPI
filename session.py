@@ -88,7 +88,7 @@ def session():
 
             # Insert Code:-
             cursor.execute(
-                "insert into user_registration(ID, USER_ID, SESSION_ID, PATIENT_ID, USER_IP, USER_DEVICE) "
+                "insert into session(ID, USER_ID, SESSION_ID, PATIENT_ID, USER_IP, USER_DEVICE) "
                 "VALUES(%s,%s,%s,%s,%s,%s)", (id, user_id, session_id, patient_id, IPAddress, hostname))
             mysql.connection.commit()
             # details = cur.fetchall()
@@ -107,7 +107,7 @@ if __name__ == "__main__":
 # Post Man:-
 """
 Working URL Now:-
-POST:-
+POST:- Inserting Values change id every time.
 http://127.0.0.1:5000/session/create 
 Body---> Raw----> json
 {

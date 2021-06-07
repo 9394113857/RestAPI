@@ -6,3 +6,476 @@
 2021-06-06 23:00:50,860  * Debugger is active!
 2021-06-06 23:00:50,860  * Debugger PIN: 127-466-217
 2021-06-06 23:00:51,079  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 11:57:19,394 -----------------------------
+2021-06-07 11:57:19,394 User_Department script started Now:-
+2021-06-07 11:57:19,441  * Restarting with stat
+2021-06-07 11:57:20,245 -----------------------------
+2021-06-07 11:57:20,245 User_Department script started Now:-
+2021-06-07 11:57:20,261  * Debugger is active!
+2021-06-07 11:57:20,261  * Debugger PIN: 127-466-217
+2021-06-07 11:57:20,667  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 11:57:22,732 127.0.0.1 - - [07/Jun/2021 11:57:22] "POST /departments/create HTTP/1.1" 200 -
+2021-06-07 11:59:02,203 -----------------------------
+2021-06-07 11:59:02,203 User_Department script started Now:-
+2021-06-07 11:59:02,219  * Restarting with stat
+2021-06-07 11:59:02,937 -----------------------------
+2021-06-07 11:59:02,937 User_Department script started Now:-
+2021-06-07 11:59:02,969  * Debugger is active!
+2021-06-07 11:59:02,969  * Debugger PIN: 127-466-217
+2021-06-07 11:59:03,203  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 11:59:06,468 127.0.0.1 - - [07/Jun/2021 11:59:06] "POST /departments/create HTTP/1.1" 200 -
+2021-06-07 11:59:18,789  * Detected change in "F:\\Restful-API's\\RestAPI\\user_department.py", reloading
+2021-06-07 11:59:18,836  * Restarting with stat
+2021-06-07 11:59:19,680 -----------------------------
+2021-06-07 11:59:19,680 User_Department script started Now:-
+2021-06-07 11:59:19,696  * Debugger is active!
+2021-06-07 11:59:19,711  * Debugger PIN: 127-466-217
+2021-06-07 11:59:19,961  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 11:59:50,743 127.0.0.1 - - [07/Jun/2021 11:59:50] "[33mPOST /hospitals/create HTTP/1.1[0m" 404 -
+2021-06-07 12:02:41,468 127.0.0.1 - - [07/Jun/2021 12:02:41] "[33mPOST /hospitals/create HTTP/1.1[0m" 404 -
+2021-06-07 12:03:49,551  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:03:49,626  * Restarting with stat
+2021-06-07 12:03:50,565 -----------------------------
+2021-06-07 12:03:50,565 User_Department script started Now:-
+2021-06-07 12:03:50,596  * Debugger is active!
+2021-06-07 12:03:50,596  * Debugger PIN: 127-466-217
+2021-06-07 12:03:51,377  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:04:39,078  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:04:39,152  * Restarting with stat
+2021-06-07 12:04:40,373 -----------------------------
+2021-06-07 12:04:40,373 User_Department script started Now:-
+2021-06-07 12:04:40,389  * Debugger is active!
+2021-06-07 12:04:40,405  * Debugger PIN: 127-466-217
+2021-06-07 12:04:40,639  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:05:05,570  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:05:05,617  * Restarting with stat
+2021-06-07 12:05:06,773 -----------------------------
+2021-06-07 12:05:06,773 User_Department script started Now:-
+2021-06-07 12:05:06,804  * Debugger is active!
+2021-06-07 12:05:06,804  * Debugger PIN: 127-466-217
+2021-06-07 12:05:07,070  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:05:12,552  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:05:12,615  * Restarting with stat
+2021-06-07 12:05:13,677 -----------------------------
+2021-06-07 12:05:13,677 User_Department script started Now:-
+2021-06-07 12:05:13,693  * Debugger is active!
+2021-06-07 12:05:13,709  * Debugger PIN: 127-466-217
+2021-06-07 12:05:13,990  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:06:06,220  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:06:06,267  * Restarting with stat
+2021-06-07 12:06:07,142 -----------------------------
+2021-06-07 12:06:07,142 User_Department script started Now:-
+2021-06-07 12:06:07,158  * Debugger is active!
+2021-06-07 12:06:07,174  * Debugger PIN: 127-466-217
+2021-06-07 12:06:07,392  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:06:13,767  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:06:13,814  * Restarting with stat
+2021-06-07 12:06:14,674 -----------------------------
+2021-06-07 12:06:14,674 User_Department script started Now:-
+2021-06-07 12:06:14,689  * Debugger is active!
+2021-06-07 12:06:14,689  * Debugger PIN: 127-466-217
+2021-06-07 12:06:14,939  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:06:37,012  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:06:37,059  * Restarting with stat
+2021-06-07 12:06:37,888 -----------------------------
+2021-06-07 12:06:37,888 User_Department script started Now:-
+2021-06-07 12:06:37,997  * Debugger is active!
+2021-06-07 12:06:38,013  * Debugger PIN: 127-466-217
+2021-06-07 12:06:38,620  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:06:49,202  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:06:49,249  * Restarting with stat
+2021-06-07 12:06:50,015 -----------------------------
+2021-06-07 12:06:50,015 User_Department script started Now:-
+2021-06-07 12:06:50,046  * Debugger is active!
+2021-06-07 12:06:50,046  * Debugger PIN: 127-466-217
+2021-06-07 12:06:50,312  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:07:12,104  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:07:12,167  * Restarting with stat
+2021-06-07 12:07:12,917 -----------------------------
+2021-06-07 12:07:12,917 User_Department script started Now:-
+2021-06-07 12:07:12,932  * Debugger is active!
+2021-06-07 12:07:12,948  * Debugger PIN: 127-466-217
+2021-06-07 12:07:13,182  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:07:15,823  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:07:15,886  * Restarting with stat
+2021-06-07 12:07:16,714 -----------------------------
+2021-06-07 12:07:16,714 User_Department script started Now:-
+2021-06-07 12:07:16,729  * Debugger is active!
+2021-06-07 12:07:16,729  * Debugger PIN: 127-466-217
+2021-06-07 12:07:17,073  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:07:27,670  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:07:27,717  * Restarting with stat
+2021-06-07 12:07:28,482 -----------------------------
+2021-06-07 12:07:28,482 User_Department script started Now:-
+2021-06-07 12:07:28,498  * Debugger is active!
+2021-06-07 12:07:28,498  * Debugger PIN: 127-466-217
+2021-06-07 12:07:28,795  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:07:31,655  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:07:31,718  * Restarting with stat
+2021-06-07 12:07:32,405 -----------------------------
+2021-06-07 12:07:32,405 User_Department script started Now:-
+2021-06-07 12:07:32,421  * Debugger is active!
+2021-06-07 12:07:32,421  * Debugger PIN: 127-466-217
+2021-06-07 12:07:32,671  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:07:37,900  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:07:37,956  * Restarting with stat
+2021-06-07 12:07:38,737 -----------------------------
+2021-06-07 12:07:38,737 User_Department script started Now:-
+2021-06-07 12:07:38,769  * Debugger is active!
+2021-06-07 12:07:38,769  * Debugger PIN: 127-466-217
+2021-06-07 12:07:38,987  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:08:35,750  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:08:35,813  * Restarting with stat
+2021-06-07 12:08:36,577 -----------------------------
+2021-06-07 12:08:36,577 User_Department script started Now:-
+2021-06-07 12:08:36,592  * Debugger is active!
+2021-06-07 12:08:36,592  * Debugger PIN: 127-466-217
+2021-06-07 12:08:36,842  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:08:45,268  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:08:45,373  * Restarting with stat
+2021-06-07 12:08:46,308 -----------------------------
+2021-06-07 12:08:46,308 User_Department script started Now:-
+2021-06-07 12:08:46,339  * Debugger is active!
+2021-06-07 12:08:46,339  * Debugger PIN: 127-466-217
+2021-06-07 12:08:46,730  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:08:54,721  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:08:54,768  * Restarting with stat
+2021-06-07 12:08:55,628 -----------------------------
+2021-06-07 12:08:55,628 User_Department script started Now:-
+2021-06-07 12:08:55,643  * Debugger is active!
+2021-06-07 12:08:55,659  * Debugger PIN: 127-466-217
+2021-06-07 12:08:55,909  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:09:09,994  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:09:10,129  * Restarting with stat
+2021-06-07 12:09:11,352 -----------------------------
+2021-06-07 12:09:11,352 User_Department script started Now:-
+2021-06-07 12:09:11,377  * Debugger is active!
+2021-06-07 12:09:11,385  * Debugger PIN: 127-466-217
+2021-06-07 12:09:11,660  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:09:25,918  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:09:25,964  * Restarting with stat
+2021-06-07 12:09:27,339 -----------------------------
+2021-06-07 12:09:27,339 User_Department script started Now:-
+2021-06-07 12:09:27,355  * Debugger is active!
+2021-06-07 12:09:27,355  * Debugger PIN: 127-466-217
+2021-06-07 12:09:27,621  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:10:28,116  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:10:28,272  * Restarting with stat
+2021-06-07 12:10:29,280 -----------------------------
+2021-06-07 12:10:29,280 User_Department script started Now:-
+2021-06-07 12:10:29,312  * Debugger is active!
+2021-06-07 12:10:29,312  * Debugger PIN: 127-466-217
+2021-06-07 12:10:29,562  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:11:02,337  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:11:02,383  * Restarting with stat
+2021-06-07 12:11:03,212 -----------------------------
+2021-06-07 12:11:03,212 User_Department script started Now:-
+2021-06-07 12:11:03,243  * Debugger is active!
+2021-06-07 12:11:03,258  * Debugger PIN: 127-466-217
+2021-06-07 12:11:03,524  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:12:00,710  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:12:00,779  * Restarting with stat
+2021-06-07 12:12:01,998 -----------------------------
+2021-06-07 12:12:01,998 User_Department script started Now:-
+2021-06-07 12:12:02,014  * Debugger is active!
+2021-06-07 12:12:02,014  * Debugger PIN: 127-466-217
+2021-06-07 12:12:02,233  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:12:06,280  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:12:06,342  * Restarting with stat
+2021-06-07 12:12:07,092 -----------------------------
+2021-06-07 12:12:07,092 User_Department script started Now:-
+2021-06-07 12:12:07,108  * Debugger is active!
+2021-06-07 12:12:07,108  * Debugger PIN: 127-466-217
+2021-06-07 12:12:07,342  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:13:03,658  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:13:03,705  * Restarting with stat
+2021-06-07 12:13:04,392 -----------------------------
+2021-06-07 12:13:04,392 User_Department script started Now:-
+2021-06-07 12:13:04,423  * Debugger is active!
+2021-06-07 12:13:04,439  * Debugger PIN: 127-466-217
+2021-06-07 12:13:04,705  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:13:24,955  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:13:25,017  * Restarting with stat
+2021-06-07 12:13:25,736 -----------------------------
+2021-06-07 12:13:25,736 User_Department script started Now:-
+2021-06-07 12:13:25,752  * Debugger is active!
+2021-06-07 12:13:25,752  * Debugger PIN: 127-466-217
+2021-06-07 12:13:25,986  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:13:59,878  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:14:00,238  * Restarting with stat
+2021-06-07 12:14:01,134 -----------------------------
+2021-06-07 12:14:01,134 User_Department script started Now:-
+2021-06-07 12:14:01,149  * Debugger is active!
+2021-06-07 12:14:01,149  * Debugger PIN: 127-466-217
+2021-06-07 12:14:01,399  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:14:16,947  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:14:16,993  * Restarting with stat
+2021-06-07 12:14:17,681 -----------------------------
+2021-06-07 12:14:17,681 User_Department script started Now:-
+2021-06-07 12:14:17,712  * Debugger is active!
+2021-06-07 12:14:17,712  * Debugger PIN: 127-466-217
+2021-06-07 12:14:17,978  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:14:23,463  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:14:23,524  * Restarting with stat
+2021-06-07 12:14:24,632 -----------------------------
+2021-06-07 12:14:24,632 User_Department script started Now:-
+2021-06-07 12:14:24,648  * Debugger is active!
+2021-06-07 12:14:24,663  * Debugger PIN: 127-466-217
+2021-06-07 12:14:24,929  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:15:13,760  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:15:13,807  * Restarting with stat
+2021-06-07 12:15:15,370 -----------------------------
+2021-06-07 12:15:15,370 User_Department script started Now:-
+2021-06-07 12:15:15,401  * Debugger is active!
+2021-06-07 12:15:15,401  * Debugger PIN: 127-466-217
+2021-06-07 12:15:15,620  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:15:26,409  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:15:26,456  * Restarting with stat
+2021-06-07 12:15:27,377 -----------------------------
+2021-06-07 12:15:27,377 User_Department script started Now:-
+2021-06-07 12:15:27,393  * Debugger is active!
+2021-06-07 12:15:27,393  * Debugger PIN: 127-466-217
+2021-06-07 12:15:27,659  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:15:35,674  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:15:35,721  * Restarting with stat
+2021-06-07 12:15:36,471 -----------------------------
+2021-06-07 12:15:36,471 User_Department script started Now:-
+2021-06-07 12:15:36,487  * Debugger is active!
+2021-06-07 12:15:36,503  * Debugger PIN: 127-466-217
+2021-06-07 12:15:36,737  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:15:49,721  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:15:49,799  * Restarting with stat
+2021-06-07 12:15:50,643 -----------------------------
+2021-06-07 12:15:50,643 User_Department script started Now:-
+2021-06-07 12:15:50,658  * Debugger is active!
+2021-06-07 12:15:50,658  * Debugger PIN: 127-466-217
+2021-06-07 12:15:50,893  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:16:02,497  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:16:02,560  * Restarting with stat
+2021-06-07 12:16:03,216 -----------------------------
+2021-06-07 12:16:03,216 User_Department script started Now:-
+2021-06-07 12:16:03,232  * Debugger is active!
+2021-06-07 12:16:03,247  * Debugger PIN: 127-466-217
+2021-06-07 12:16:03,528  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:16:19,091  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:16:19,183  * Restarting with stat
+2021-06-07 12:16:20,020 -----------------------------
+2021-06-07 12:16:20,020 User_Department script started Now:-
+2021-06-07 12:16:20,036  * Debugger is active!
+2021-06-07 12:16:20,051  * Debugger PIN: 127-466-217
+2021-06-07 12:16:20,301  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:16:24,445  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:16:24,500  * Restarting with stat
+2021-06-07 12:16:25,301 -----------------------------
+2021-06-07 12:16:25,301 User_Department script started Now:-
+2021-06-07 12:16:25,316  * Debugger is active!
+2021-06-07 12:16:25,332  * Debugger PIN: 127-466-217
+2021-06-07 12:16:25,566  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:17:08,649  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:17:08,712  * Restarting with stat
+2021-06-07 12:17:09,587 -----------------------------
+2021-06-07 12:17:09,587 User_Department script started Now:-
+2021-06-07 12:17:09,603  * Debugger is active!
+2021-06-07 12:17:09,618  * Debugger PIN: 127-466-217
+2021-06-07 12:17:09,884  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:18:16,516  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:18:16,596  * Restarting with stat
+2021-06-07 12:18:17,440 -----------------------------
+2021-06-07 12:18:17,440 User_Department script started Now:-
+2021-06-07 12:18:17,455  * Debugger is active!
+2021-06-07 12:18:17,471  * Debugger PIN: 127-466-217
+2021-06-07 12:18:18,440  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:18:30,713  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:18:30,760  * Restarting with stat
+2021-06-07 12:18:31,432 -----------------------------
+2021-06-07 12:18:31,432 User_Department script started Now:-
+2021-06-07 12:18:31,447  * Debugger is active!
+2021-06-07 12:18:31,447  * Debugger PIN: 127-466-217
+2021-06-07 12:18:31,713  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:18:55,943  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:18:55,990  * Restarting with stat
+2021-06-07 12:18:58,011 -----------------------------
+2021-06-07 12:18:58,011 User_Department script started Now:-
+2021-06-07 12:18:58,027  * Debugger is active!
+2021-06-07 12:18:58,027  * Debugger PIN: 127-466-217
+2021-06-07 12:18:58,308  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:19:02,360  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:19:02,433  * Restarting with stat
+2021-06-07 12:19:03,492 -----------------------------
+2021-06-07 12:19:03,492 User_Department script started Now:-
+2021-06-07 12:19:03,508  * Debugger is active!
+2021-06-07 12:19:03,524  * Debugger PIN: 127-466-217
+2021-06-07 12:19:03,789  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:19:11,571  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:19:11,618  * Restarting with stat
+2021-06-07 12:19:13,165 -----------------------------
+2021-06-07 12:19:13,165 User_Department script started Now:-
+2021-06-07 12:19:13,180  * Debugger is active!
+2021-06-07 12:19:13,180  * Debugger PIN: 127-466-217
+2021-06-07 12:19:13,430  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:19:28,696  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:19:28,743  * Restarting with stat
+2021-06-07 12:19:29,392 -----------------------------
+2021-06-07 12:19:29,392 User_Department script started Now:-
+2021-06-07 12:19:29,407  * Debugger is active!
+2021-06-07 12:19:29,407  * Debugger PIN: 127-466-217
+2021-06-07 12:19:29,736  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:19:32,564  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:19:32,642  * Restarting with stat
+2021-06-07 12:19:33,640 -----------------------------
+2021-06-07 12:19:33,640 User_Department script started Now:-
+2021-06-07 12:19:33,655  * Debugger is active!
+2021-06-07 12:19:33,671  * Debugger PIN: 127-466-217
+2021-06-07 12:19:33,921  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:19:39,078  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:19:39,141  * Restarting with stat
+2021-06-07 12:19:39,953 -----------------------------
+2021-06-07 12:19:39,953 User_Department script started Now:-
+2021-06-07 12:19:39,985  * Debugger is active!
+2021-06-07 12:19:39,985  * Debugger PIN: 127-466-217
+2021-06-07 12:19:40,313  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:20:40,224  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:20:40,271  * Restarting with stat
+2021-06-07 12:20:41,005 -----------------------------
+2021-06-07 12:20:41,005 User_Department script started Now:-
+2021-06-07 12:20:41,037  * Debugger is active!
+2021-06-07 12:20:41,037  * Debugger PIN: 127-466-217
+2021-06-07 12:20:41,271  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:22:33,612 127.0.0.1 - - [07/Jun/2021 12:22:33] "[33mPOST /hospitals/create HTTP/1.1[0m" 404 -
+2021-06-07 12:23:15,763 127.0.0.1 - - [07/Jun/2021 12:23:15] "[33mPOST /hospitals/create HTTP/1.1[0m" 404 -
+2021-06-07 12:23:31,525  * Detected change in "F:\\Restful-API's\\RestAPI\\user_hospital.py", reloading
+2021-06-07 12:23:31,588  * Restarting with stat
+2021-06-07 12:23:32,400 -----------------------------
+2021-06-07 12:23:32,400 User_Department script started Now:-
+2021-06-07 12:23:32,432  * Debugger is active!
+2021-06-07 12:23:32,432  * Debugger PIN: 127-466-217
+2021-06-07 12:23:32,744  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:24:03,880 127.0.0.1 - - [07/Jun/2021 12:24:03] "[33mPOST /qualifications/create HTTP/1.1[0m" 404 -
+2021-06-07 12:24:21,739  * Detected change in "F:\\Restful-API's\\RestAPI\\user_qualification.py", reloading
+2021-06-07 12:24:21,791  * Restarting with stat
+2021-06-07 12:24:22,861 -----------------------------
+2021-06-07 12:24:22,861 User_Department script started Now:-
+2021-06-07 12:24:22,877  * Debugger is active!
+2021-06-07 12:24:22,893  * Debugger PIN: 127-466-217
+2021-06-07 12:24:23,143  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:24:30,870  * Detected change in "F:\\Restful-API's\\RestAPI\\user_qualification.py", reloading
+2021-06-07 12:24:30,932  * Restarting with stat
+2021-06-07 12:24:31,745 -----------------------------
+2021-06-07 12:24:31,745 User_Department script started Now:-
+2021-06-07 12:24:31,776  * Debugger is active!
+2021-06-07 12:24:31,776  * Debugger PIN: 127-466-217
+2021-06-07 12:24:32,291  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:29:15,617 127.0.0.1 - - [07/Jun/2021 12:29:15] "[33mPOST /registrations/create HTTP/1.1[0m" 404 -
+2021-06-07 12:29:28,540  * Detected change in "F:\\Restful-API's\\RestAPI\\user_registration.py", reloading
+2021-06-07 12:29:28,612  * Restarting with stat
+2021-06-07 12:29:29,560 -----------------------------
+2021-06-07 12:29:29,560 User_Department script started Now:-
+2021-06-07 12:29:29,592  * Debugger is active!
+2021-06-07 12:29:29,600  * Debugger PIN: 127-466-217
+2021-06-07 12:29:29,912  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:30:36,530  * Detected change in "F:\\Restful-API's\\RestAPI\\user_signup.py", reloading
+2021-06-07 12:30:36,631  * Restarting with stat
+2021-06-07 12:30:37,719 -----------------------------
+2021-06-07 12:30:37,719 User_Department script started Now:-
+2021-06-07 12:30:37,735  * Debugger is active!
+2021-06-07 12:30:37,743  * Debugger PIN: 127-466-217
+2021-06-07 12:30:38,047  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:30:55,875  * Detected change in "F:\\Restful-API's\\RestAPI\\user_signup.py", reloading
+2021-06-07 12:30:55,951  * Restarting with stat
+2021-06-07 12:30:57,251 -----------------------------
+2021-06-07 12:30:57,251 User_Department script started Now:-
+2021-06-07 12:30:57,281  * Debugger is active!
+2021-06-07 12:30:57,287  * Debugger PIN: 127-466-217
+2021-06-07 12:30:57,669  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:31:33,160 127.0.0.1 - - [07/Jun/2021 12:31:33] "[33mPOST /users/create HTTP/1.1[0m" 404 -
+2021-06-07 22:41:09,976 -----------------------------
+2021-06-07 22:41:09,998 User_Department script started Now:-
+2021-06-07 22:41:10,076  * Restarting with stat
+2021-06-07 22:41:12,724 -----------------------------
+2021-06-07 22:41:12,728 User_Department script started Now:-
+2021-06-07 22:41:12,800  * Debugger is active!
+2021-06-07 22:41:12,816  * Debugger PIN: 288-974-247
+2021-06-07 22:41:13,701  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 22:41:15,300 127.0.0.1 - - [07/Jun/2021 22:41:15] "POST /departments/create HTTP/1.1" 200 -
+2021-06-07 22:41:51,216 -----------------------------
+2021-06-07 22:41:51,216 User_Department script started Now:-
+2021-06-07 22:41:51,288  * Restarting with stat
+2021-06-07 22:41:54,091 -----------------------------
+2021-06-07 22:41:54,091 User_Department script started Now:-
+2021-06-07 22:41:54,147  * Debugger is active!
+2021-06-07 22:41:54,163  * Debugger PIN: 288-974-247
+2021-06-07 22:41:55,352  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 22:41:56,704 127.0.0.1 - - [07/Jun/2021 22:41:56] "POST /departments/create HTTP/1.1" 200 -
+2021-06-07 22:43:53,408 -----------------------------
+2021-06-07 22:43:53,408 User_Department script started Now:-
+2021-06-07 22:43:53,480  * Restarting with stat
+2021-06-07 22:43:55,560 -----------------------------
+2021-06-07 22:43:55,560 User_Department script started Now:-
+2021-06-07 22:43:55,616  * Debugger is active!
+2021-06-07 22:43:55,624  * Debugger PIN: 288-974-247
+2021-06-07 22:43:56,441  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 22:44:04,580 127.0.0.1 - - [07/Jun/2021 22:44:04] "POST /departments/create HTTP/1.1" 200 -
+2021-06-07 22:45:12,825 -----------------------------
+2021-06-07 22:45:12,833 User_Department script started Now:-
+2021-06-07 22:45:12,905  * Restarting with stat
+2021-06-07 22:45:15,009 -----------------------------
+2021-06-07 22:45:15,009 User_Department script started Now:-
+2021-06-07 22:45:15,065  * Debugger is active!
+2021-06-07 22:45:15,077  * Debugger PIN: 288-974-247
+2021-06-07 22:45:15,969  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 22:45:17,548 127.0.0.1 - - [07/Jun/2021 22:45:17] "POST /departments/create HTTP/1.1" 200 -
+2021-06-07 22:47:15,568 -----------------------------
+2021-06-07 22:47:15,568 User_Department script started Now:-
+2021-06-07 22:47:15,648  * Restarting with stat
+2021-06-07 22:47:17,891 -----------------------------
+2021-06-07 22:47:17,891 User_Department script started Now:-
+2021-06-07 22:47:17,963  * Debugger is active!
+2021-06-07 22:47:17,975  * Debugger PIN: 288-974-247
+2021-06-07 22:47:19,235  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 22:47:19,399 127.0.0.1 - - [07/Jun/2021 22:47:19] "POST /departments/create HTTP/1.1" 200 -
+2021-06-07 22:53:11,400 -----------------------------
+2021-06-07 22:53:11,408 User_Department script started Now:-
+2021-06-07 22:53:11,480  * Restarting with stat
+2021-06-07 22:53:13,526 -----------------------------
+2021-06-07 22:53:13,526 User_Department script started Now:-
+2021-06-07 22:53:13,590  * Debugger is active!
+2021-06-07 22:53:13,606  * Debugger PIN: 288-974-247
+2021-06-07 22:53:14,541  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 22:53:40,822 127.0.0.1 - - [07/Jun/2021 22:53:40] "POST /departments/create HTTP/1.1" 200 -
+2021-06-07 22:54:01,166 -----------------------------
+2021-06-07 22:54:01,166 User_Department script started Now:-
+2021-06-07 22:54:01,254  * Restarting with stat
+2021-06-07 22:54:03,541 -----------------------------
+2021-06-07 22:54:03,541 User_Department script started Now:-
+2021-06-07 22:54:03,589  * Debugger is active!
+2021-06-07 22:54:03,597  * Debugger PIN: 288-974-247
+2021-06-07 22:54:04,413  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 22:54:08,364 127.0.0.1 - - [07/Jun/2021 22:54:08] "POST /departments/create HTTP/1.1" 200 -
+2021-06-07 23:19:12,837 -----------------------------
+2021-06-07 23:19:12,837 User_Department script started Now:-
+2021-06-07 23:19:12,917  * Restarting with stat
+2021-06-07 23:19:15,301 -----------------------------
+2021-06-07 23:19:15,302 User_Department script started Now:-
+2021-06-07 23:19:15,353  * Debugger is active!
+2021-06-07 23:19:15,367  * Debugger PIN: 288-974-247
+2021-06-07 23:19:16,480  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 23:19:19,495 127.0.0.1 - - [07/Jun/2021 23:19:19] "POST /departments/create HTTP/1.1" 200 -
+2021-06-07 23:22:52,636 -----------------------------
+2021-06-07 23:22:52,637 User_Department script started Now:-
+2021-06-07 23:22:52,720  * Restarting with stat
+2021-06-07 23:22:54,875 -----------------------------
+2021-06-07 23:22:54,876 User_Department script started Now:-
+2021-06-07 23:22:54,927  * Debugger is active!
+2021-06-07 23:22:54,937  * Debugger PIN: 288-974-247
+2021-06-07 23:22:56,098  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 23:23:03,329 127.0.0.1 - - [07/Jun/2021 23:23:03] "POST /departments/create HTTP/1.1" 200 -
+2021-06-07 23:26:27,787 -----------------------------
+2021-06-07 23:26:27,788 User_Department script started Now:-
+2021-06-07 23:26:27,866  * Restarting with stat
+2021-06-07 23:26:29,909 -----------------------------
+2021-06-07 23:26:29,909 User_Department script started Now:-
+2021-06-07 23:26:29,960  * Debugger is active!
+2021-06-07 23:26:29,970  * Debugger PIN: 288-974-247
+2021-06-07 23:26:30,805  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 23:26:35,313 127.0.0.1 - - [07/Jun/2021 23:26:35] "POST /departments/create HTTP/1.1" 200 -
+2021-06-07 23:27:49,779 127.0.0.1 - - [07/Jun/2021 23:27:49] "POST /departments/create HTTP/1.1" 200 -

@@ -49,7 +49,7 @@ mysql = MySQL(app)
 # create in postman by using jsonify:-
 @app.route('/departments/create', methods=['POST'])
 def departments():
-    if 'id' in request.json and 'deptid' in request.json and 'dept_name' in request.json and 'dept_head' in request.json:
+    if 'id' in request.json and 'dept_id' in request.json and 'dept_name' in request.json and 'dept_head' in request.json:
 
         id = request.json['id']
         dept_id = request.json['dept_id']
@@ -91,7 +91,7 @@ def departments():
             # Insert Code:-
             cursor.execute(
                 "insert into user_department(ID, USER_ID, DEPT_ID, DEPT_NAME, DEPT_HEAD, USER_IP, USER_DEVICE,) "
-                "VALUES(%s, %s, %s, %s, %s, %s)", (id, user_id, dept_id, dept_name, dept_head, IPAddress, hostname))
+                "VALUES(%s, %s, %s, %s, %s, %s, %s)", (id, user_id, dept_id, dept_name, dept_head, IPAddress, hostname))
             mysql.connection.commit()
             # details = cur.fetchall()
             logger.info("successfully registred")
@@ -109,11 +109,11 @@ if __name__ == "__main__":
 # Post Man:-
 """
 Working URL Now:-
-POST:-
-http://127.0.0.1:5000/departments/create 
+POST:- // Please fill out the fields !
+http://127.0.0.1:5000/departments/create
 Body---> Raw----> json
-{
-    "id"        : 1,
+{ 
+    "id"        :  1, 
     "dept_id"   : "1",
     "dept_name" : "IT",
     "dept_head" : "CEO"

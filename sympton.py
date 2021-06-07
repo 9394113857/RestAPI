@@ -59,13 +59,11 @@ def sympton():
 
         # Cursor:-
         cursor = mysql.connection.cursor()
-        cursor.execute('SELECT * FROM user_registration WHERE USER_REG_ID = % s', (regid,))
+        cursor.execute('SELECT * FROM symptom WHERE SESSION_ID = % s', (session_id,))
         account = cursor.fetchone()
         if account:
             msg = 'Account already exists !'
         # Checking conditions:-
-        elif not re.match(r'^(19|20)\d\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])$', date): # perfect
-            msg = 'Invalid date format !'
         elif not session_id or not sympton_id or not sympton_name or not input:
             msg = 'Please fill out the fields !'
 
@@ -110,12 +108,12 @@ if __name__ == "__main__":
 # Post Man:-
 """
 Working URL Now:-
-POST:-
+POST:- Inserting Values change session_id and sympton_id every time.
 http://127.0.0.1:5000/sympton/create 
 Body---> Raw----> json
 {
     "session_id"    : "1",
-    "sympton_id"    : "1",
+    "sympton_id"    : 1,
     "sympton_name"  : "High Fever",
     "input"         : 1
 }

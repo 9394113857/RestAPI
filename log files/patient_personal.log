@@ -6,3 +6,108 @@
 2021-06-06 22:59:26,419  * Debugger is active!
 2021-06-06 22:59:26,435  * Debugger PIN: 127-466-217
 2021-06-06 22:59:26,654  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 11:30:13,792 -----------------------------
+2021-06-07 11:30:13,792 Patient_Personal script started Now:-
+2021-06-07 11:30:13,824  * Restarting with stat
+2021-06-07 11:30:14,605 -----------------------------
+2021-06-07 11:30:14,605 Patient_Personal script started Now:-
+2021-06-07 11:30:14,621  * Debugger is active!
+2021-06-07 11:30:14,637  * Debugger PIN: 127-466-217
+2021-06-07 11:30:14,933  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 11:30:19,548 127.0.0.1 - - [07/Jun/2021 11:30:19] "[31m[1mPOST /patient_personal/create HTTP/1.1[0m" 400 -
+2021-06-07 11:30:50,587 -----------------------------
+2021-06-07 11:30:50,587 Patient_Personal script started Now:-
+2021-06-07 11:30:50,618  * Restarting with stat
+2021-06-07 11:30:51,540 -----------------------------
+2021-06-07 11:30:51,540 Patient_Personal script started Now:-
+2021-06-07 11:30:51,567  * Debugger is active!
+2021-06-07 11:30:51,575  * Debugger PIN: 127-466-217
+2021-06-07 11:30:51,925  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 11:30:53,526 127.0.0.1 - - [07/Jun/2021 11:30:53] "[35m[1mPOST /patient_personal/create HTTP/1.1[0m" 500 -
+2021-06-07 11:32:09,862 -----------------------------
+2021-06-07 11:32:09,862 Patient_Personal script started Now:-
+2021-06-07 11:32:09,893  * Restarting with stat
+2021-06-07 11:32:10,503 -----------------------------
+2021-06-07 11:32:10,503 Patient_Personal script started Now:-
+2021-06-07 11:32:10,519  * Debugger is active!
+2021-06-07 11:32:10,519  * Debugger PIN: 127-466-217
+2021-06-07 11:32:10,769  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 11:32:13,554 127.0.0.1 - - [07/Jun/2021 11:32:13] "[35m[1mPOST /patient_personal/create HTTP/1.1[0m" 500 -
+2021-06-07 11:36:29,906 -----------------------------
+2021-06-07 11:36:29,906 Patient_Personal script started Now:-
+2021-06-07 11:36:29,930  * Restarting with stat
+2021-06-07 11:36:30,610 -----------------------------
+2021-06-07 11:36:30,610 Patient_Personal script started Now:-
+2021-06-07 11:36:30,634  * Debugger is active!
+2021-06-07 11:36:30,634  * Debugger PIN: 127-466-217
+2021-06-07 11:36:30,890  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 11:36:36,004 127.0.0.1 - - [07/Jun/2021 11:36:36] "[35m[1mPOST /patient_personal/create HTTP/1.1[0m" 500 -
+2021-06-07 15:12:33,945 -----------------------------
+2021-06-07 15:12:33,967 Patient_Personal script started Now:-
+2021-06-07 15:12:34,362  * Restarting with stat
+2021-06-07 15:12:36,546 -----------------------------
+2021-06-07 15:12:36,546 Patient_Personal script started Now:-
+2021-06-07 15:12:36,622  * Debugger is active!
+2021-06-07 15:12:36,639  * Debugger PIN: 127-466-217
+2021-06-07 15:12:38,211  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 15:12:40,337 127.0.0.1 - - [07/Jun/2021 15:12:40] "[35m[1mPOST /patient_personal/create HTTP/1.1[0m" 500 -
+2021-06-07 15:15:00,584 -----------------------------
+2021-06-07 15:15:00,584 Patient_Personal script started Now:-
+2021-06-07 15:15:00,662  * Restarting with stat
+2021-06-07 15:15:02,752 -----------------------------
+2021-06-07 15:15:02,752 Patient_Personal script started Now:-
+2021-06-07 15:15:02,814  * Debugger is active!
+2021-06-07 15:15:02,814  * Debugger PIN: 127-466-217
+2021-06-07 15:15:03,392  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 15:15:07,087 127.0.0.1 - - [07/Jun/2021 15:15:07] "[35m[1mPOST /patient_personal/create HTTP/1.1[0m" 500 -
+2021-06-07 15:16:21,433 -----------------------------
+2021-06-07 15:16:21,433 Patient_Personal script started Now:-
+2021-06-07 15:16:21,500  * Restarting with stat
+2021-06-07 15:16:23,336 -----------------------------
+2021-06-07 15:16:23,336 Patient_Personal script started Now:-
+2021-06-07 15:16:23,383  * Debugger is active!
+2021-06-07 15:16:23,383  * Debugger PIN: 127-466-217
+2021-06-07 15:16:23,951  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 15:16:31,056 127.0.0.1 - - [07/Jun/2021 15:16:31] "[35m[1mPOST /patient_personal/create HTTP/1.1[0m" 500 -
+2021-06-07 15:19:38,292 -----------------------------
+2021-06-07 15:19:38,293 Patient_Personal script started Now:-
+2021-06-07 15:19:38,365  * Restarting with stat
+2021-06-07 15:19:40,078 -----------------------------
+2021-06-07 15:19:40,079 Patient_Personal script started Now:-
+2021-06-07 15:19:40,144  * Debugger is active!
+2021-06-07 15:19:40,155  * Debugger PIN: 127-466-217
+2021-06-07 15:19:40,938  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 15:19:53,479 127.0.0.1 - - [07/Jun/2021 15:19:53] "[35m[1mPOST /patient_personal/create HTTP/1.1[0m" 500 -
+2021-06-07 22:17:04,667 -----------------------------
+2021-06-07 22:17:04,699 Patient_Personal script started Now:-
+2021-06-07 22:17:04,771  * Restarting with stat
+2021-06-07 22:17:07,000 -----------------------------
+2021-06-07 22:17:07,000 Patient_Personal script started Now:-
+2021-06-07 22:17:07,084  * Debugger is active!
+2021-06-07 22:17:07,092  * Debugger PIN: 288-974-247
+2021-06-07 22:17:07,704  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 22:17:08,719 successfully registred
+2021-06-07 22:17:08,723 127.0.0.1 - - [07/Jun/2021 22:17:08] "POST /patient_personal/create HTTP/1.1" 200 -
+2021-06-07 22:17:12,646 127.0.0.1 - - [07/Jun/2021 22:17:12] "POST /patient_personal/create HTTP/1.1" 200 -
+2021-06-07 22:17:21,964 127.0.0.1 - - [07/Jun/2021 22:17:21] "[35m[1mPOST /patient_personal/create HTTP/1.1[0m" 500 -
+2021-06-07 22:19:05,222 -----------------------------
+2021-06-07 22:19:05,222 Patient_Personal script started Now:-
+2021-06-07 22:19:05,302  * Restarting with stat
+2021-06-07 22:19:07,230 -----------------------------
+2021-06-07 22:19:07,230 Patient_Personal script started Now:-
+2021-06-07 22:19:07,342  * Debugger is active!
+2021-06-07 22:19:07,358  * Debugger PIN: 288-974-247
+2021-06-07 22:19:08,166  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 22:19:12,118 127.0.0.1 - - [07/Jun/2021 22:19:12] "[35m[1mPOST /patient_personal/create HTTP/1.1[0m" 500 -
+2021-06-07 22:19:47,863 -----------------------------
+2021-06-07 22:19:47,863 Patient_Personal script started Now:-
+2021-06-07 22:19:47,951  * Restarting with stat
+2021-06-07 22:19:50,154 -----------------------------
+2021-06-07 22:19:50,158 Patient_Personal script started Now:-
+2021-06-07 22:19:50,230  * Debugger is active!
+2021-06-07 22:19:50,242  * Debugger PIN: 288-974-247
+2021-06-07 22:19:51,214  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 22:19:52,354 successfully registred
+2021-06-07 22:19:52,354 127.0.0.1 - - [07/Jun/2021 22:19:52] "POST /patient_personal/create HTTP/1.1" 200 -
+2021-06-07 22:20:05,866 successfully registred
+2021-06-07 22:20:05,870 127.0.0.1 - - [07/Jun/2021 22:20:05] "POST /patient_personal/create HTTP/1.1" 200 -

@@ -130,15 +130,15 @@ if __name__ == "__main__":
 # Post Man:-
 """
 Working URL Now:-
-POST:-
+POST:- Inserting Values signup_id every time.
 http://127.0.0.1:5000/users/create 
 Body---> Raw----> json
 {
-    "signup_id" :          2 ,
-    "username" :           "Raghu",
-    "mail_id" :            "raghunadh2@gmail.com",
-    "user_phone_number" :  "9394113852",
-    "user_password" :      "raghu123",
-    "date" :               "2021-06-06"
+    "signup_id"         :  3,
+    "username"          :  "Raghu",
+    "mail_id"           :  "raghunadh3@gmail.com",
+    "user_phone_number" :  "9394113853",
+    "user_password"     :  "raghu123",
+    "date"              :  "2021-06-06"
 }
 """

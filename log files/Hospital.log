@@ -6,3 +6,131 @@
 2021-06-06 23:00:57,923  * Debugger is active!
 2021-06-06 23:00:57,923  * Debugger PIN: 127-466-217
 2021-06-06 23:00:58,141  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 11:59:45,848 -----------------------------
+2021-06-07 11:59:45,848 User_Hospital script started Now:-
+2021-06-07 11:59:45,880  * Restarting with stat
+2021-06-07 11:59:46,567 -----------------------------
+2021-06-07 11:59:46,567 User_Hospital script started Now:-
+2021-06-07 11:59:46,583  * Debugger is active!
+2021-06-07 11:59:46,583  * Debugger PIN: 127-466-217
+2021-06-07 11:59:46,880  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:02:35,116 -----------------------------
+2021-06-07 12:02:35,116 User_Hospital script started Now:-
+2021-06-07 12:02:35,148  * Restarting with stat
+2021-06-07 12:02:36,132 -----------------------------
+2021-06-07 12:02:36,132 User_Hospital script started Now:-
+2021-06-07 12:02:36,163  * Debugger is active!
+2021-06-07 12:02:36,163  * Debugger PIN: 127-466-217
+2021-06-07 12:02:36,445  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:21:54,703 -----------------------------
+2021-06-07 12:21:54,703 User_Hospital script started Now:-
+2021-06-07 12:21:54,734  * Restarting with stat
+2021-06-07 12:21:55,390 -----------------------------
+2021-06-07 12:21:55,390 User_Hospital script started Now:-
+2021-06-07 12:21:55,421  * Debugger is active!
+2021-06-07 12:21:55,421  * Debugger PIN: 127-466-217
+2021-06-07 12:21:55,703  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:22:20,236 -----------------------------
+2021-06-07 12:22:20,236 User_Hospital script started Now:-
+2021-06-07 12:22:20,252  * Restarting with stat
+2021-06-07 12:22:22,524 -----------------------------
+2021-06-07 12:22:22,524 User_Hospital script started Now:-
+2021-06-07 12:22:22,540  * Debugger is active!
+2021-06-07 12:22:22,540  * Debugger PIN: 127-466-217
+2021-06-07 12:22:22,805  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 12:23:13,076 -----------------------------
+2021-06-07 12:23:13,076 User_Hospital script started Now:-
+2021-06-07 12:23:13,107  * Restarting with stat
+2021-06-07 12:23:13,872 -----------------------------
+2021-06-07 12:23:13,872 User_Hospital script started Now:-
+2021-06-07 12:23:13,888  * Debugger is active!
+2021-06-07 12:23:13,888  * Debugger PIN: 127-466-217
+2021-06-07 12:23:14,197  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 14:22:32,139 -----------------------------
+2021-06-07 14:22:32,186 User_Hospital script started Now:-
+2021-06-07 14:22:32,414  * Restarting with stat
+2021-06-07 14:22:34,113 -----------------------------
+2021-06-07 14:22:34,113 User_Hospital script started Now:-
+2021-06-07 14:22:34,160  * Debugger is active!
+2021-06-07 14:22:34,206  * Debugger PIN: 127-466-217
+2021-06-07 14:22:35,011  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 14:22:37,639 127.0.0.1 - - [07/Jun/2021 14:22:37] "POST /hospitals/create HTTP/1.1" 200 -
+2021-06-07 14:24:17,536 -----------------------------
+2021-06-07 14:24:17,536 User_Hospital script started Now:-
+2021-06-07 14:24:17,614  * Restarting with stat
+2021-06-07 14:24:19,569 -----------------------------
+2021-06-07 14:24:19,569 User_Hospital script started Now:-
+2021-06-07 14:24:19,616  * Debugger is active!
+2021-06-07 14:24:19,632  * Debugger PIN: 127-466-217
+2021-06-07 14:24:20,310  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 14:24:23,132 127.0.0.1 - - [07/Jun/2021 14:24:23] "POST /hospitals/create HTTP/1.1" 200 -
+2021-06-07 14:25:45,095 -----------------------------
+2021-06-07 14:25:45,095 User_Hospital script started Now:-
+2021-06-07 14:25:45,157  * Restarting with stat
+2021-06-07 14:25:47,033 -----------------------------
+2021-06-07 14:25:47,033 User_Hospital script started Now:-
+2021-06-07 14:25:47,079  * Debugger is active!
+2021-06-07 14:25:47,095  * Debugger PIN: 127-466-217
+2021-06-07 14:25:47,906  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 14:25:53,123 127.0.0.1 - - [07/Jun/2021 14:25:53] "POST /hospitals/create HTTP/1.1" 200 -
+2021-06-07 14:26:26,741 -----------------------------
+2021-06-07 14:26:26,741 User_Hospital script started Now:-
+2021-06-07 14:26:26,820  * Restarting with stat
+2021-06-07 14:26:28,558 -----------------------------
+2021-06-07 14:26:28,573 User_Hospital script started Now:-
+2021-06-07 14:26:28,604  * Debugger is active!
+2021-06-07 14:26:28,620  * Debugger PIN: 127-466-217
+2021-06-07 14:26:29,371  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 14:26:31,543 127.0.0.1 - - [07/Jun/2021 14:26:31] "POST /hospitals/create HTTP/1.1" 200 -
+2021-06-07 14:29:03,548 -----------------------------
+2021-06-07 14:29:03,548 User_Hospital script started Now:-
+2021-06-07 14:29:03,626  * Restarting with stat
+2021-06-07 14:29:05,063 -----------------------------
+2021-06-07 14:29:05,063 User_Hospital script started Now:-
+2021-06-07 14:29:05,110  * Debugger is active!
+2021-06-07 14:29:05,110  * Debugger PIN: 127-466-217
+2021-06-07 14:29:05,642  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 14:29:08,864 127.0.0.1 - - [07/Jun/2021 14:29:08] "[35m[1mPOST /hospitals/create HTTP/1.1[0m" 500 -
+2021-06-07 14:30:49,253 -----------------------------
+2021-06-07 14:30:49,253 User_Hospital script started Now:-
+2021-06-07 14:30:49,329  * Restarting with stat
+2021-06-07 14:30:51,182 -----------------------------
+2021-06-07 14:30:51,182 User_Hospital script started Now:-
+2021-06-07 14:30:51,238  * Debugger is active!
+2021-06-07 14:30:51,250  * Debugger PIN: 127-466-217
+2021-06-07 14:30:52,002  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 14:30:53,370 127.0.0.1 - - [07/Jun/2021 14:30:53] "[35m[1mPOST /hospitals/create HTTP/1.1[0m" 500 -
+2021-06-07 14:39:46,050 -----------------------------
+2021-06-07 14:39:46,050 User_Hospital script started Now:-
+2021-06-07 14:39:46,123  * Restarting with stat
+2021-06-07 14:39:48,206 -----------------------------
+2021-06-07 14:39:48,206 User_Hospital script started Now:-
+2021-06-07 14:39:48,250  * Debugger is active!
+2021-06-07 14:39:48,250  * Debugger PIN: 127-466-217
+2021-06-07 14:39:48,901  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 14:40:04,921 127.0.0.1 - - [07/Jun/2021 14:40:04] "[35m[1mPOST /hospitals/create HTTP/1.1[0m" 500 -
+2021-06-07 14:44:17,382 -----------------------------
+2021-06-07 14:44:17,382 User_Hospital script started Now:-
+2021-06-07 14:44:17,460  * Restarting with stat
+2021-06-07 14:44:19,194 -----------------------------
+2021-06-07 14:44:19,194 User_Hospital script started Now:-
+2021-06-07 14:44:19,241  * Debugger is active!
+2021-06-07 14:44:19,241  * Debugger PIN: 127-466-217
+2021-06-07 14:44:19,990  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 14:44:23,569 127.0.0.1 - - [07/Jun/2021 14:44:23] "[35m[1mPOST /hospitals/create HTTP/1.1[0m" 500 -
+2021-06-07 23:09:44,751 -----------------------------
+2021-06-07 23:09:44,774 User_Hospital script started Now:-
+2021-06-07 23:09:44,845  * Restarting with stat
+2021-06-07 23:09:47,296 -----------------------------
+2021-06-07 23:09:47,297 User_Hospital script started Now:-
+2021-06-07 23:09:47,331  * Debugger is active!
+2021-06-07 23:09:47,337  * Debugger PIN: 288-974-247
+2021-06-07 23:09:47,848  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-07 23:09:51,354 successfully registred
+2021-06-07 23:09:51,358 127.0.0.1 - - [07/Jun/2021 23:09:51] "POST /hospitals/create HTTP/1.1" 200 -
+2021-06-07 23:09:56,714 127.0.0.1 - - [07/Jun/2021 23:09:56] "POST /hospitals/create HTTP/1.1" 200 -
+2021-06-07 23:10:04,043 successfully registred
+2021-06-07 23:10:04,047 127.0.0.1 - - [07/Jun/2021 23:10:04] "POST /hospitals/create HTTP/1.1" 200 -
+2021-06-07 23:10:10,091 127.0.0.1 - - [07/Jun/2021 23:10:10] "POST /hospitals/create HTTP/1.1" 200 -
+2021-06-07 23:10:15,999 successfully registred
+2021-06-07 23:10:16,003 127.0.0.1 - - [07/Jun/2021 23:10:16] "POST /hospitals/create HTTP/1.1" 200 -

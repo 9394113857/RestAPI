@@ -56,7 +56,7 @@ def api_logs():
 
         # Cursor:-
         cursor = mysql.connection.cursor()
-        cursor.execute('SELECT * FROM user_registration WHERE API_ID = % s', (api_id,))
+        cursor.execute('SELECT * FROM api_logs WHERE API_ID = % s', (api_id,))
         account = cursor.fetchone()
         if account:
             msg = 'Account already exists !'
@@ -105,7 +105,7 @@ if __name__ == "__main__":
 
 # Post Man:-
 """
-Working URL Now:-
+Working URL Now:- Inserting Values
 POST:-
 http://127.0.0.1:5000/api_logs/create 
 Body---> Raw----> json

@@ -106,7 +106,7 @@ def patient_personal():
 
             # Insert Code:-
             cursor.execute(
-                "insert into user_registration(PATIENT_ID, USER_ID, PATIENT_NAME, PHONE_NUMBER, MAIL_ID, FLAT_NO, STREET_NAME, CITY_NAME, STATE_NAME, COUNTRY_NAME, ZIP_CODE, DATE_OF_BIRTH, CREATED_BY, IP_ADDRESS, USER_DEVICE, CREATED_DATE) "
+                "insert into patient_personal(PATIENT_ID, USER_ID, PATIENT_NAME, PHONE_NUMBER, MAIL_ID, FLAT_NO, STREET_NAME, CITY_NAME, STATE_NAME, COUNTRY_NAME, ZIP_CODE, DATE_OF_BIRTH, CREATED_BY, IP_ADDRESS, USER_DEVICE, CREATED_DATE) "
                 "VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", (patient_id, user_id, patient_name, phone, mail_id, flat_no, street_name, city_name, state_name, country_name, zip_code, date_of_birth, created_by, IPAddress, hostname, date))
             mysql.connection.commit()
             # details = cur.fetchall()
@@ -125,7 +125,7 @@ if __name__ == "__main__":
 # Post Man:-
 """
 Working URL Now:-
-POST:-
+POST:- Inserting Values change patient_id and phone, mail_id every time they are unique.
 http://127.0.0.1:5000/patient_personal/create 
 Body---> Raw----> json
 {
@@ -133,7 +133,7 @@ Body---> Raw----> json
     "patient_name"      :  "Raghu",
     "phone"             :  "9394113857",
     "mail_id"           :  "raghunadh2@gmail.com",
-    "flat_no"           :  "5-7-33, Sangeeth Nagar, Kukatpally, Hyd - 72",
+    "flat_no"           :  "5-7-33",
     "street_name"       :  "Sangeeth Nagar",    
     "city_name"         :  "HYD",
     "state_name"        :  "TS",
@@ -141,7 +141,7 @@ Body---> Raw----> json
     "zip_code"          :  500072,
     "date_of_birth"     :  "1992-04-14",
     "created_by"        :  "Raghu",
-    "date"              :  "2021-06-06",    
+    "date"              :  "2021-06-06"   
 }
 """
 

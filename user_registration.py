@@ -126,11 +126,11 @@ if __name__ == "__main__":
 # Post Man:-
 """
 Working URL Now:-
-POST:-
+POST:- // Inserting Values change reg_id every time.
 http://127.0.0.1:5000/registrations/create 
 Body---> Raw----> json
 {
-    "reg_id"                :  1,
+    "reg_id"                :  4,
     "user_age"              :  29,
     "user_experience"       :  3.10,
     "user_gender"           :  "MALE",
@@ -142,7 +142,7 @@ Body---> Raw----> json
     "country_name"          :  "IND",
     "zip_code"              :  500072,
     "user_approved"         :  "2021-06-06",
-    "date"                  :  "2021-106-06"
+    "date"                  :  "2021-06-06"
 }
 """
 
