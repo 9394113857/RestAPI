@@ -24,6 +24,7 @@ logger.setLevel(logging.DEBUG)
 #Test messages
 logger.info('-----------------------------')
 logger.info("User_Registration script started Now:-")
+logger.info('-----------------------------')
 """
 logger.debug("Harmless debug Message")
 logger.info("Just an information")
