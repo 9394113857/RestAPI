@@ -28,6 +28,7 @@ logger.setLevel(logging.DEBUG)
 # Test messages:-
 logger.info('-----------------------------')
 logger.info("User_Signup script started Now:-")
+logger.info('-----------------------------')
 
 
 """ 
@@ -131,16 +132,19 @@ def register():
             print('----------------------------------')
             print("Current Inserted ID is: " + str(current_user_id))
             print('----------------------------------')
+            """
+            current_user_name = ("SELECT USER_NAME FROM user_signup")
+            print('----------------------------------')
+            print("Current Inserted User Name is: " + str(current_user_name))
+            print('----------------------------------')
+            """
             # cursor.close()
             # details = cur.fetchall()
             logger.info("Successfully Registred with Id: %s", current_user_id)
+            #logger.info("Successfully Registred with User Name: %s", current_user_name)
             return "successfully inserted", 200
         return msg
     return "invalid parameters"
-
-
-
-
 
 
 # MAIN app To Run the Flask Script:-
