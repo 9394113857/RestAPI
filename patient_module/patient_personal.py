@@ -1,27 +1,25 @@
 # 1.This framework is for throwing Errors of Fields:-
 # 2.Flask framework and Mysql Database:-
-import re
 # 3. Get ip and device name from socket library:-
+# importing module
+import logging
 import socket
 
-from flask import request, jsonify, Flask, logging
+from flask import request, Flask
 from flask_mysqldb import MySQL
 
-#importing module
-import logging
-
-#Create and configure logger
+# Create and configure logger
 logging.basicConfig(filename="F:\Restful-API's\RestAPI\log files\patient_personal.log",
-					format='%(asctime)s %(message)s',
-					filemode='a')
+                    format='%(asctime)s %(message)s',
+                    filemode='a')
 
-#Creating an object
-logger=logging.getLogger()
+# Creating an object
+logger = logging.getLogger()
 
-#Setting the threshold of logger to DEBUG
+# Setting the threshold of logger to DEBUG
 logger.setLevel(logging.DEBUG)
 
-#Test messages
+# Test messages
 logger.info('-----------------------------')
 logger.info("Patient_Personal script started Now:-")
 """
@@ -31,8 +29,6 @@ logger.warning("Its a Warning")
 logger.error("Did you try to divide by zero")
 logger.critical("Internet is down")
 """
-
-
 
 # Flask App Initialization:-
 app = Flask(__name__)
@@ -50,11 +46,11 @@ mysql = MySQL(app)
 @app.route('/patient_personal/create', methods=['POST'])
 def patient_personal():
     if 'patient_id' in request.json and 'patient_name' in request.json \
-            and 'phone' in request.json and 'mail_id' in request.json\
-            and 'flat_no' in request.json and 'street_name' in request.json\
-            and 'city_name' in request.json and 'state_name' in request.json\
-            and 'country_name' in request.json and 'zip_code' in request.json\
-            and 'date_of_birth' in request.json and 'created_by' in request.json\
+            and 'phone' in request.json and 'mail_id' in request.json \
+            and 'flat_no' in request.json and 'street_name' in request.json \
+            and 'city_name' in request.json and 'state_name' in request.json \
+            and 'country_name' in request.json and 'zip_code' in request.json \
+            and 'date_of_birth' in request.json and 'created_by' in request.json \
             and 'date':
 
         patient_id = request.json['patient_id']
@@ -78,9 +74,9 @@ def patient_personal():
         if account:
             msg = 'Account already exists !'
         # Checking conditions:-
-        elif not patient_id or not patient_name or not phone or not mail_id\
-                or not flat_no or not street_name or not city_name or not state_name\
-                or not country_name or not zip_code or not date_of_birth or not created_by\
+        elif not patient_id or not patient_name or not phone or not mail_id \
+                or not flat_no or not street_name or not city_name or not state_name \
+                or not country_name or not zip_code or not date_of_birth or not created_by \
                 or not date:
             msg = 'Please fill out the fields !'
 
@@ -93,7 +89,7 @@ def patient_personal():
             print('----------------------')
             print("Last Id is: " + str(lastid))
             lastid += 1
-            pattern = 'US000' # pattern = ooo
+            pattern = 'US000'  # pattern = ooo
             # pattern += 1 # pattern incremnting always by 1:-
             user_id = pattern + str(lastid)
             # User Id pattern Code End #
@@ -101,13 +97,15 @@ def patient_personal():
             # Python Program to Get IP Address and Device Name:-
             hostname = socket.gethostname()
             IPAddress = socket.gethostbyname(hostname)
-            #print("Your Computer Name is:" + hostname)
-            #print("Your Computer IP Address is:" + IPAddr)
+            # print("Your Computer Name is:" + hostname)
+            # print("Your Computer IP Address is:" + IPAddr)
 
             # Insert Code:-
             cursor.execute(
                 "insert into patient_personal(PATIENT_ID, USER_ID, PATIENT_NAME, PHONE_NUMBER, MAIL_ID, FLAT_NO, STREET_NAME, CITY_NAME, STATE_NAME, COUNTRY_NAME, ZIP_CODE, DATE_OF_BIRTH, CREATED_BY, IP_ADDRESS, USER_DEVICE, CREATED_DATE) "
-                "VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", (patient_id, user_id, patient_name, phone, mail_id, flat_no, street_name, city_name, state_name, country_name, zip_code, date_of_birth, created_by, IPAddress, hostname, date))
+                "VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", (
+                    patient_id, user_id, patient_name, phone, mail_id, flat_no, street_name, city_name, state_name,
+                    country_name, zip_code, date_of_birth, created_by, IPAddress, hostname, date))
             mysql.connection.commit()
             # details = cur.fetchall()
             logger.info("successfully registred")

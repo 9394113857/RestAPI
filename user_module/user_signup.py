@@ -1,26 +1,33 @@
-# 1.This framework is for throwing Errors of Fields:-
-# 2.Flask framework and Mysql Database:-
-import re
-# 3. Get ip and device name from socket library:-
-import socket
-
-from flask import request, jsonify, Flask, logging
-from flask_mysqldb import MySQL
-
-# Checking Valid Phone Number:-
-import phonenumbers
-from phonenumbers import carrier, timezone, geocoder, data
-
+import hashlib
 # importing module:-
 import logging
+import random
+import re
+import smtplib
+# 3. Get ip and device name from socket library:-
+import socket
+# 1.This framework is for throwing Errors of Fields:-
+# 2.Flask framework and Mysql Database:-
+from pipes import quote
+
+import MySQLdb
+import jwt
+import mysql
+from flask import request, Blueprint, app
+from flask_mysqldb import MySQL
+from werkzeug.security import generate_password_hash
+
+# Checking Valid Phone Number:-
+# import phonenumbers
+# from phonenumbers import carrier, timezone, geocoder, data
 
 # Create and configure logger:-
 logging.basicConfig(filename="F:\Restful-API's\RestAPI\log files\Signup.log",
-					format='%(asctime)s %(message)s',
-					filemode='a')
+                    format='%(asctime)s %(message)s',
+                    filemode='a')
 
 # Creating an object:-
-logger=logging.getLogger()
+logger = logging.getLogger()
 
 # Setting the threshold of logger to DEBUG:-
 logger.setLevel(logging.DEBUG)
@@ -29,7 +36,6 @@ logger.setLevel(logging.DEBUG)
 logger.info('-----------------------------')
 logger.info("User_Signup script started Now:-")
 logger.info('-----------------------------')
-
 
 """ 
 All logger Messages:-
@@ -40,33 +46,27 @@ logger.error("Did you try to divide by zero")
 logger.critical("Internet is down")
 """
 
-
 # Flask App Initialization:-
-app = Flask(__name__)
-
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'raghu'
-app.config['MYSQL_DB'] = 'clinicalfirst'
-
-mysql = MySQL(app)
+user = Blueprint("user", __name__)
 
 # User_Signup:-
 # create in postman by using jsonify:-
-@app.route('/users/create', methods=['POST'])
+@user.route('/insert', methods=['POST'])
+@user.route('/', methods=['POST'])
 def register():
-    if 'username' in request.json and 'mail_id' in request.json\
+    if 'username' in request.json and 'mail_id' in request.json \
             and 'user_phone_number' in request.json and 'user_password' and 'date' in request.json:
 
-        #signup_id = request.json['signup_id']
+        # signup_id = request.json['signup_id']
         username = request.json['username']
         mail_id = request.json['mail_id']
         user_phone_number = request.json['user_phone_number']
         user_password = request.json['user_password']
+        hashed_password = generate_password_hash(user_password)
         date = request.json['date']
 
         # Cursor Initialization:-
-        cursor = mysql.connection.cursor()
+        cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cursor.execute('SELECT * FROM user_signup WHERE USER_NAME = % s', (username,))
         account = cursor.fetchone()
         if account:
@@ -123,7 +123,7 @@ def register():
             # Execute cursor now:-
             cursor.execute(
                 "insert into user_signup(USER_ID, USER_NAME, USER_MAIL_ID, USER_PHONE_NUMBER, USER_PASSWORD, USER_IP, USER_DEVICE, USER_DATE_CREATED) VALUES(%s,%s,%s,%s,%s,%s,%s,%s)",
-                (user_id, username, mail_id, user_phone_number, user_password, IPAddr, hostname, date))
+                (user_id, username, mail_id, user_phone_number, hashed_password, IPAddr, hostname, date))
             mysql.connection.commit()
 
             # Current Inserted USER_ID:-
@@ -141,19 +141,120 @@ def register():
             # cursor.close()
             # details = cur.fetchall()
             logger.info("Successfully Registred with Id: %s", current_user_id)
-            #logger.info("Successfully Registred with User Name: %s", current_user_name)
+            # logger.info("Successfully Registred with User Name: %s", current_user_name)
             return "successfully inserted", 200
         return msg
     return "invalid parameters"
 
 
-# MAIN app To Run the Flask Script:-
-if __name__ == "__main__":
-    app.run(debug=True)
+# Login:-
+# @app.route('/login', methods=["POST"])
+# def login():
+#     if 'mail_id' in request.json and 'password' in request.json:
+#         mail_id = request.json['mail_id']
+#         password = request.json["password"]
+#         cur = mysql.connection.cursor()
+#         cur.execute("select * from user_signup WHERE (USER_MAIL_ID = %s)", (mail_id,))
+#         details = cur.fetchone()
+#         if details is None:
+#             return ({"Error": "No details"}), 401
+#         # here 2 is the index num
+#         hashed_password = details[4]
+#         password_match = check_password_hash(hashed_password, password)
+#         if password_match:
+#             # generate the JWT Token
+#             token = jwt.encode({
+#                 'user_mail': mail_id,
+#                 'exp': datetime.utcnow() + timedelta(minutes=2)},
+#                 app.config['SECRET_KEY'], algorithm='HS256')
+#
+#             return token
+#         else:
+#             return ({"Error": "invalid credentials"}), 401
+#     return "Insufficient parameters", 400
+#
+#
+# def token_required(f):
+#     @wraps(f)
+#     def decorated(*args, **kwargs):
+#         token = None
+#         if "x-access-token" in request.headers:
+#             token = request.headers["x-access-token"]
+#         if not token:
+#             return jsonify({"message": "Token is missing !!"}), 401
+#         try:
+#             data = jwt.decode(token, app.config['SECRET_KEY'], algorithms=['HS256'])
+#             current_user = data['user_mail']
+#
+#         except:
+#             return jsonify({"message": "Token is invalid"})
+#
+#         return f(current_user, *args, **kwargs)
+#
+#     return decorated
+#
+#
+# @app.route('/user/validate', methods=["GET"])
+# @token_required
+# def tokenTesting(user):
+#     return user
 
-# When you deploy before to the server:-
-# Note:-     app.run(debug=False)
-# Make debug value False and deploy the code.
+
+##############################################################################
+# Forgot Password Token Genaration:-
+@user.route('/forgot_pass', methods=['POST'])
+def reset():
+    if request.method == 'POST' and (request.json or request.form):
+        user_mail_id = None
+        user_mail_id = request.json['user_mail_id']
+        cur = mysql.connection.cursor()
+        cur.execute("select * from user_signup where USER_MAIL_ID=%s", (user_mail_id,))
+        account = cur.fetchone()
+        if account is None:
+            return "invalid details"
+        else:
+            token = jwt.encode({'email': user_mail_id}, app.config["SECRET_KEY"], algorithm='HS256')
+            lin = quote(token)
+            otp = ''.join([str(random.randint(0, 9)) for i in range(6)])
+            print(otp)
+            body = '\n\n' + '\n your reset password link: ' + (
+                'http://127.0.0.1:5000/forgot_pass') + '\n' + "http://127.0.0.1:5000/reset_pass"
+            try:
+                smtpObj = smtplib.SMTP('smtp.gmail.com', 587)
+            except Exception as e:
+                print(e)
+                smtpObj = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+
+            smtpObj.receiver = user_mail_id
+
+            smtpObj.ehlo()
+            smtpObj.starttls()
+            smtpObj.login('ur mail', "ur password from web")
+            smtpObj.sendmail('ur mail', smtpObj.receiver, body)
+
+            smtpObj.quit()
+            pass
+            return "reset link sent to your mail"
+
+    return "invalid"
+
+
+# Confirm Password with Generated Token:-
+@user.route('/reset_pass', methods=['GET', 'POST'])
+def index():
+    if request.method == 'POST' and (request.json or request.form):
+        user_mail_id = request.json['user_mail_id']
+        user_password = request.json['user_password']
+        user_confirm_password = request.json['user_confirm_password']
+        if user_password == user_confirm_password:
+            updated_pass = user_confirm_password
+            h = hashlib.md5(updated_pass.encode())
+            cur = mysql.connection.cursor()
+            cur.execute("update user_signup set USER_PASSWORD=%s where USER_MAIL_ID=%s", (h.hexdigest(), user_mail_id))
+            mysql.connection.commit()
+            cur.close()
+            return "success"
+
 
 ################################################ END CODE ##############################################################
 
@@ -161,7 +262,7 @@ if __name__ == "__main__":
 """
 Working URL Now:-
 POST:- Inserting Values change username, mail_id and user_phone_number every time.
-http://127.0.0.1:5000/users/create 
+http://127.0.0.1:5000/user/insert 
 Body---> Raw----> json
 {     
     "username"          :  "Raghu1",

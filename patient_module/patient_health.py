@@ -1,27 +1,25 @@
 # 1.This framework is for throwing Errors of Fields:-
 # 2.Flask framework and Mysql Database:-
-import re
 # 3. Get ip and device name from socket library:-
+# importing module
+import logging
 import socket
 
-from flask import request, jsonify, Flask, logging
+from flask import request, Flask
 from flask_mysqldb import MySQL
 
-#importing module
-import logging
-
-#Create and configure logger
+# Create and configure logger
 logging.basicConfig(filename="F:\Restful-API's\RestAPI\log files\patient_health.log",
-					format='%(asctime)s %(message)s',
-					filemode='a')
+                    format='%(asctime)s %(message)s',
+                    filemode='a')
 
-#Creating an object
-logger=logging.getLogger()
+# Creating an object
+logger = logging.getLogger()
 
-#Setting the threshold of logger to DEBUG
+# Setting the threshold of logger to DEBUG
 logger.setLevel(logging.DEBUG)
 
-#Test messages
+# Test messages
 logger.info('-----------------------------')
 logger.info("Patient_Health script started Now:-")
 """
@@ -31,8 +29,6 @@ logger.warning("Its a Warning")
 logger.error("Did you try to divide by zero")
 logger.critical("Internet is down")
 """
-
-
 
 # Flask App Initialization:-
 app = Flask(__name__)
@@ -50,10 +46,10 @@ mysql = MySQL(app)
 @app.route('/patient_health/create', methods=['POST'])
 def patient_health():
     if 'health_id' in request.json and 'patient_id' in request.json \
-    and 'blood_group' in request.json and 'patient_age' in request.json and 'patient_weight' in request.json \
-    and 'patient_height' in request.json and 'systolic_bp' in request.json and 'dyastolic_bp' in request.json \
-    and 'patient_temperature' in request.json and 'created_by' in request.json\
-    and 'date' in request.json:
+            and 'blood_group' in request.json and 'patient_age' in request.json and 'patient_weight' in request.json \
+            and 'patient_height' in request.json and 'systolic_bp' in request.json and 'dyastolic_bp' in request.json \
+            and 'patient_temperature' in request.json and 'created_by' in request.json \
+            and 'date' in request.json:
 
         health_id = request.json['health_id']
         patient_id = request.json['patient_id']
@@ -66,7 +62,7 @@ def patient_health():
         patient_temperature = request.json['patient_temperature']
         created_by = request.json['created_by']
         date = request.json['date']
-        
+
         # Cursor:-
         cursor = mysql.connection.cursor()
         cursor.execute('SELECT * FROM patient_health WHERE PATIENT_HEALTH_ID = % s', (health_id,))
@@ -74,8 +70,8 @@ def patient_health():
         if account:
             msg = 'Account already exists !'
         # Checking conditions:-
-        elif not health_id or not patient_id or not blood_group or not patient_age or not patient_weight\
-               or not patient_height or not systolic_bp or not dyastolic_bp or not patient_temperature\
+        elif not health_id or not patient_id or not blood_group or not patient_age or not patient_weight \
+                or not patient_height or not systolic_bp or not dyastolic_bp or not patient_temperature \
                 or not created_by:
             msg = 'Please fill out the fields !'
 
@@ -88,7 +84,7 @@ def patient_health():
             print('----------------------')
             print("Last Id is: " + str(lastid))
             lastid += 1
-            pattern = 'US000' # pattern = ooo
+            pattern = 'US000'  # pattern = ooo
             # pattern += 1 # pattern incremnting always by 1:-
             user_id = pattern + str(lastid)
             # User Id pattern Code End #
@@ -96,13 +92,16 @@ def patient_health():
             # Python Program to Get IP Address and Device Name:-
             hostname = socket.gethostname()
             IPAddress = socket.gethostbyname(hostname)
-            #print("Your Computer Name is:" + hostname)
-            #print("Your Computer IP Address is:" + IPAddr)
+            # print("Your Computer Name is:" + hostname)
+            # print("Your Computer IP Address is:" + IPAddr)
 
             # Insert Code:-
             cursor.execute(
                 "insert into patient_health(PATIENT_HEALTH_ID, USER_ID, PATIENT_ID, BLOOD_GROUP, PATIENT_AGE, PATIENT_WEIGHT, PATIENT_HEIGHT, PATIENT_SYSTOLIC_BP, PATIENT_DYASTOLIC_BP, PATIENT_TEMPARATURE, CREATED_BY, IP_ADDRESS, USER_DEVICE, CREATED_DATE) "
-                "VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", (patient_id, user_id, patient_id, blood_group, patient_age, patient_weight, patient_height, systolic_bp, dyastolic_bp, patient_temperature, created_by, IPAddress, hostname, date))
+                "VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", (
+                    patient_id, user_id, patient_id, blood_group, patient_age, patient_weight, patient_height,
+                    systolic_bp,
+                    dyastolic_bp, patient_temperature, created_by, IPAddress, hostname, date))
             mysql.connection.commit()
             # details = cur.fetchall()
             logger.info("successfully registred")
@@ -137,7 +136,6 @@ Body---> Raw----> json
     "date"                  :   "2021-06-06"    
 }
 """
-
 
 """
 Commented Code:-
