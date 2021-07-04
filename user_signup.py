@@ -14,7 +14,6 @@ import MySQLdb
 import jwt
 import mysql
 from flask import request, Blueprint, app
-from flask_mysqldb import MySQL
 from werkzeug.security import generate_password_hash
 
 # Checking Valid Phone Number:-

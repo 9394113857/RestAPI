@@ -1,23 +1,24 @@
 from flask import Flask
 from flask_mysqldb import MySQL
 
-from user_module.user_signup import user
+from admin.second import second
 
 app = Flask(__name__)
-app.register_blueprint(user, url_prefix="/user")
 
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'raghu'
+app.config['MYSQL_PASSWORD'] = ''
 app.config['MYSQL_DB'] = 'clinicalfirst'
 
 mysql = MySQL(app)
 
+app.register_blueprint(second, url_prefix="/second")
+
 
 # default root:-
 @app.route("/")
-def test():
-    return "<h1>Test Message from Empty root Raghu !!!</h1>"
+def default():
+    return "<h1>Test Message from Empty root !!!</h1>"
 
 
 # MAIN app To Run the Flask Script:-
