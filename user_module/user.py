@@ -1,22 +1,31 @@
 import MySQLdb
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, jsonify, request
 
 # blueprint setup
-second = Blueprint("second", __name__)
+from flask_mysqldb import MySQL
+
+db = Blueprint("db", __name__)
+
+db.config['MYSQL_HOST'] = 'localhost'
+db.config['MYSQL_USER'] = 'root'
+db.config['MYSQL_PASSWORD'] = ''
+db.config['MYSQL_DB'] = 'clinicalfirst'
+
+mysql = MySQL(db)
 
 
-@second.route("/home")
-@second.route("/hom")
+@db.route("/home")
+@db.route("/hom")
 def home():
-    return jsonify('Home page from home of /admin/home url of second blueprint instance !!!')
+    return jsonify('Home page from home of /db/home url of database.py blueprint instance !!!')
 
 
-@second.route("/test")
+@db.route("/test")
 def test():
     return "<h1>Test</h1>"
 
 
-@second.route("/mysql")
+@db.route("/version")
 def mysql():
     # Open databasee connection
     mysql = MySQLdb.connect("localhost", "root", "", "clinicalfirst")
@@ -39,7 +48,7 @@ def mysql():
     db.close()
 
 
-@second.route("/databases")
+@db.route("/databases")
 def databases():
     # Open databasee connection:-
     mysql = MySQLdb.connect("localhost", "root", "", "clinicalfirst")
@@ -56,7 +65,7 @@ def databases():
         return jsonify(x[0])
 
 
-@second.route("/select")
+@db.route("/select")
 def select_method():
     # Open databasee connection:-
     mysql = MySQLdb.connect("localhost", "root", "", "clinicalfirst")
@@ -73,35 +82,35 @@ def select_method():
     return jsonify(myresult)
 
 
-@second.route("/insert")
-def insert_method():
-    # Open databasee connection:-
-    mysql = MySQLdb.connect("localhost", "root", "", "clinicalfirst")
-    # mysql = MySQLdb.connections.cursors()
+# @db.route("/insert")
+# def insert_method():
+#     # Open databasee connection:-
+#     mysql = MySQLdb.connect("localhost", "root", "", "clinicalfirst")
+#     # mysql = MySQLdb.connections.cursors()
+#
+#     # prepare a cursor object using cursor() method:-
+#     cursor = mysql.cursor()
+#
+#     # execute SQL query using execute() method:-
+#     cursor.execute("SELECT * FROM user_signup")
+#
+#     sql = "INSERT INTO user_signup (USER_ID, USER_NAME) VALUES (%s, %s)"
+#     val = [
+#         ('001', 'Raghu 2'),
+#         ('002', 'Raghu 3')
+#     ]
+#
+#     cursor.executemany(sql, val)
+#
+#     mysql.commit()
+#
+#     # print(cursor.rowcount, "record was inserted.")
+#
+#     # json response:-
+#     return jsonify(cursor.rowcount, "record was inserted.")
 
-    # prepare a cursor object using cursor() method:-
-    cursor = mysql.cursor()
 
-    # execute SQL query using execute() method:-
-    cursor.execute("SELECT * FROM user_signup")
-
-    sql = "INSERT INTO user_signup (USER_ID, USER_NAME) VALUES (%s, %s)"
-    val = [
-        ('001', 'Raghu 2'),
-        ('002', 'Raghu 3')
-    ]
-
-    cursor.executemany(sql, val)
-
-    mysql.commit()
-
-    # print(cursor.rowcount, "record was inserted.")
-
-    # json response:-
-    return jsonify(cursor.rowcount, "record was inserted.")
-
-
-@second.route("/id")
+@db.route("/id")
 def id():
     # Open databasee connection:-
     mysql = MySQLdb.connect("localhost", "root", "", "clinicalfirst")
@@ -120,7 +129,8 @@ def id():
 
     return jsonify("1 record inserted, ID:", cursor.lastrowid)
 
-@second.route("/insert", methods=['POST'])
+
+@db.route("/insert", methods=['POST'])
 def insert():
     # Open databasee connection:-
     mysql = MySQLdb.connect("localhost", "root", "", "clinicalfirst")
