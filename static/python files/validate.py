@@ -1,12 +1,9 @@
-import datetime
 from functools import wraps
-
 
 from flask import Flask, jsonify, request
 from flask_mysqldb import MySQL
 from marshmallow import Schema, fields
 from marshmallow import ValidationError
-
 # from msilib import schema
 from marshmallow.validate import Length
 
@@ -18,6 +15,7 @@ app.config['MYSQL_PASSWORD'] = 'raghu'
 app.config['MYSQL_DB'] = 'clinicalfirst'
 
 mysql = MySQL(app)
+
 
 # Defining Schema for validations for json:-
 class User_SignupSchema(Schema):

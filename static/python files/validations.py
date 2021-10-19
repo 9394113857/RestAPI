@@ -1,11 +1,12 @@
-from flask import Flask, request, jsonify
 from functools import wraps
 
+from flask import Flask, request, jsonify
 from marshmallow import Schema, fields, ValidationError
 
 app = Flask(__name__)
 
 users = []
+
 
 # 2nd Method:-
 class UserSchema(Schema):

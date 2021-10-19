@@ -34,6 +34,7 @@ def register_user():
 
         return "Your account has been created successfully !!!"
 
+
 """
 POST
 http://127.0.0.1:5000/userssss/insert
@@ -76,6 +77,7 @@ def logout_user():
     session.pop('username', None)
     return jsonify('User Logged Out Successfully')
 
+
 ##############################################################################
 # Insert Operation with bcrypt library:-
 @app.route("/userss/insert", methods=['GET', 'POST'])
@@ -114,6 +116,7 @@ def register_user1():
 
         return "Your account has been created successfully!"
 
+
 # Checking login user with password using bcrypt functionality:-
 @app.route("/userss/login", methods=['GET', 'POST'])
 def login_user1():
@@ -141,10 +144,10 @@ def login_user1():
             return ({"Error": "invalid credentials"}), 401
     return "Insufficient parameters", 400
 
+
 # Logout the user:-
 @app.route("/userss/logout")
 def logout_user1():
     logout_user()
     # return redirect(url_for('home'))
     return jsonify('User Logged-Out Successfully !!!!')
-

@@ -6,13 +6,14 @@ from wtforms.validators import ValidationError, DataRequired, \
     Email, EqualTo, Length
 
 app = Flask(__name__, template_folder='.')
-app.config['SECRET_KEY']='LongAndRandomSecretKey'
+app.config['SECRET_KEY'] = 'LongAndRandomSecretKey'
 
 
 class CreateUserForm(FlaskForm):
     username = StringField(label=('Username'), validators=[DataRequired(), Length(max=64)])
     email = StringField(label=('Email'), validators=[DataRequired(), Email(), Length(max=120)])
-    password = PasswordField(label=('Password'), validators=[DataRequired(), Length(min=8, message='Password should be at least %(min)d characters long')])
+    password = PasswordField(label=('Password'), validators=[DataRequired(), Length(min=8,
+                                                                                    message='Password should be at least %(min)d characters long')])
     confirm_password = PasswordField(
         label=('Confirm Password'), validators=[DataRequired(message='*Required'),
                                                 EqualTo('password', message='Both password fields must be equal!')])
@@ -29,7 +30,8 @@ class CreateUserForm(FlaskForm):
 
 
 class GreetUserForm(FlaskForm):
-    username = StringField(label=('Enter Your Name:'),validators=[DataRequired(), Length(min=5, max=64, message='Name length must be between %(min)d and %(max)dcharacters') ])
+    username = StringField(label=('Enter Your Name:'), validators=[DataRequired(), Length(min=5, max=64,
+                                                                                          message='Name length must be between %(min)d and %(max)dcharacters')])
     submit = SubmitField(label=('Submit'))
 
 
@@ -40,6 +42,6 @@ def index():
         return f"""<h1> Welcome {form.username.data} </h1>"""
     return render_template('index.html', form=form)
 
+
 if __name__ == "__main__":
     app.run(debug=True)
-

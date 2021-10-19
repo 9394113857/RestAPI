@@ -1,0 +1,8 @@
+Commands:-
+Ctrl + R = Replace
+Ctrl + F = Find
+Shift + Fn6 = Rename
+Ctrl + Alt + L = Reformat Code
+Ctrl + Alt + S = Settings
+Ctrl + Shift + Fn10 = Run the Script
+Ctrl + F2 = Stop the script

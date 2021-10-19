@@ -1,27 +1,25 @@
 # 1.This framework is for throwing Errors of Fields:-
 # 2.Flask framework and Mysql Database:-
-import re
 # 3. Get ip and device name from socket library:-
+# importing module
+import logging
 import socket
 
-from flask import request, jsonify, Flask, logging
+from flask import request, Flask
 from flask_mysqldb import MySQL
 
-#importing module
-import logging
-
-#Create and configure logger
+# Create and configure logger
 logging.basicConfig(filename="F:\Restful-API's\RestAPI\log files\Logs.log",
-					format='%(asctime)s %(message)s',
-					filemode='a')
+                    format='%(asctime)s %(message)s',
+                    filemode='a')
 
-#Creating an object
-logger=logging.getLogger()
+# Creating an object
+logger = logging.getLogger()
 
-#Setting the threshold of logger to DEBUG
+# Setting the threshold of logger to DEBUG
 logger.setLevel(logging.DEBUG)
 
-#Test messages
+# Test messages
 logger.info('-----------------------------')
 logger.info("Logs script started Now:-")
 """
@@ -31,7 +29,6 @@ logger.warning("Its a Warning")
 logger.error("Did you try to divide by zero")
 logger.critical("Internet is down")
 """
-
 
 # Flask App Initialization:-
 app = Flask(__name__)
@@ -75,7 +72,7 @@ def logs():
             print('----------------------')
             print("Last Id is: " + str(lastid))
             lastid += 1
-            pattern = 'US000' # pattern = ooo
+            pattern = 'US000'  # pattern = ooo
             # pattern += 1 # pattern incremnting always by 1:-
             user_id = pattern + str(lastid)
             # User Id pattern Code End #
@@ -83,13 +80,14 @@ def logs():
             # Python Program to Get IP Address and Device Name:-
             hostname = socket.gethostname()
             IPAddress = socket.gethostbyname(hostname)
-            #print("Your Computer Name is:" + hostname)
-            #print("Your Computer IP Address is:" + IPAddr)
+            # print("Your Computer Name is:" + hostname)
+            # print("Your Computer IP Address is:" + IPAddr)
 
             # Insert Code:-
             cursor.execute(
                 "insert into logs(LOG_ID, USER_ID, LOGIN_EMAIL_ID, LOGIN_TIME, LOGOUT_TIME, USER_IP, USER_DEVICE) "
-                "VALUES(%s,%s,%s,%s,%s,%s,%s)", (log_id, user_id, email_id, login_time, logout_time, IPAddress, hostname))
+                "VALUES(%s,%s,%s,%s,%s,%s,%s)",
+                (log_id, user_id, email_id, login_time, logout_time, IPAddress, hostname))
             mysql.connection.commit()
             # details = cur.fetchall()
             logger.info("successfully registred")
@@ -117,7 +115,6 @@ Body---> Raw----> json
     "logout_time"   :  "2021-06-07 11:50:30"
 }
 """
-
 
 """
 Commented Code:-

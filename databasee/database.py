@@ -2,13 +2,22 @@ import MySQLdb
 from flask import Blueprint, jsonify, request
 
 # blueprint setup
+from flask_mysqldb import MySQL
+
 db = Blueprint("db", __name__)
+
+# db.config['MYSQL_HOST'] = 'localhost'
+# db.config['MYSQL_USER'] = 'root'
+# db.config['MYSQL_PASSWORD'] = ''
+# db.config['MYSQL_DB'] = 'clinicalfirst'
+#
+# mysql = MySQL(db)
 
 
 @db.route("/home")
 @db.route("/hom")
 def home():
-    return jsonify('Home page from home of /db/home url of database.py blueprint instance !!!')
+    return jsonify('Home page from home of /db/home url of user.py blueprint instance !!!')
 
 
 @db.route("/test")
@@ -121,33 +130,3 @@ def id():
     return jsonify("1 record inserted, ID:", cursor.lastrowid)
 
 
-@db.route("/insert", methods=['POST'])
-def insert():
-    # Open databasee connection:-
-    mysql = MySQLdb.connect("localhost", "root", "", "clinicalfirst")
-    # mysql = MySQLdb.connections.cursors()
-
-    userid = request.json
-    user_id = userid['userid']
-
-    username = request.json
-    user_name = username['username']
-
-    # prepare a cursor object using cursor() method:-
-    cursor = mysql.cursor()
-
-    # execute SQL query using execute() method:-
-    cursor.execute("INSERT INTO user_signup (USER_ID, USER_NAME) VALUES (%s, %s)", (user_id, user_name))
-    mysql.commit()
-
-    return jsonify('Successfully Inserted'), 200
-
-"""
-Post man:-
-POST:-
-http://127.0.0.1:5000/db/insert
-{
-    "userid": "Us100",
-    "username": "raghunadh"
-}
-"""

@@ -1,4 +1,4 @@
-# RestAPI.py
+# Restful-API's.py
 
 import logging
 
@@ -20,17 +20,12 @@ name = 'Raghu'
 logging.warning('%s raised a warning', name)
 """
 
-logger.info('See the RestAPI.log file')
+logger.info('See the Restful-API's.log file')
 name = 'Krunal'
 logging.warning(' %s raised a warning', name)
 
 name = 'Krunal'
-logging.warning(f' {name} raised an warning') # space is executing
+logging.warning(f' {name} raised an warning')  # space is executing
 
 logger = logging.getLogger('demo logger')
 logger.error(' This is an error')
-
-
-
-
-
